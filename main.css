@@ -1,0 +1,128 @@
+body, html
+{
+  background:#e0e0e0;
+	color: #000;
+}
+#hd a:link,a:visited
+{
+    text-decoration:none;
+}
+#prev_label
+{
+    line-height: 3em;
+}
+img
+{
+    border: 0px none ;
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+#doc3,#doc2,#doc {
+    background: #ffffff;
+    border: 1em solid #fff;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+    margin: 1em auto;
+    position: relative;
+}
+h1, h2, h3, h4, h5, h5, form
+{
+	font-family: 'arial rounded mt bold' , 'lucida grande' , arial, sans-serif;
+	margin-top: 0;
+}
+h1
+{
+	font-size: 38px;
+}
+h2
+{
+    font-size:150%;
+}
+strong
+{
+    font-size:110%;
+    font-weight:bold;
+}
+h1, h2, h3
+{
+	color: #6600cc;
+}
+h1 span, h2 span, h3 span
+{
+	color: #00cc00;
+}
+
+h1 span span, h2 span span, h3 span span
+{
+	color: #000000;
+	font-size:80%;
+}
+
+#seperator
+{
+    width:950px;
+    height:2px;
+    background-color:#6600cc;
+}
+#tweet a:link,#tweet a:visited
+{
+    text-decoration:underline;
+    font-weight:bold
+}
+
+#topmenu {
+
+	margin: 0 0 10px 0;
+
+}
+.yuimenubar {
+    background: #6600cc;
+}
+
+
+
+.formbox
+{
+margin-top:5px;
+margin-bottom:5px;
+position:relative;
+background:#eeead5;
+color:dodgerblue;
+font-size:140%;
+padding:5px;
+border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+}
+input {
+font-size:90%;
+border: 1px solid #aeaa05;
+}
+.mybutton:hover{
+background:blue;
+}
+.mybutton{
+background:dodgerblue;
+font-size:100%;
+color:white;
+border: 0px solid #aeaa05;
+border-radius:4px;
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+}
+.cntrctnr
+{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 100%;
+}
+
+
+
