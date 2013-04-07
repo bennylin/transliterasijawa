@@ -8,6 +8,100 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="reset-fonts-grids.css" type="text/css">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <meta name="keywords" content="transliteration, transliterasi, javanese, aksara jawa, carakan, hanacaraka, wikipedia">
+    <meta name="description" content="A simple javascript based page to transliterate from Latin Script to Javanese Script (of Indonesia)">
+    <script src="jquery.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+    <script src="trans.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" charset="utf-8">
+
+// <![CDATA[
+function init_document()
+{
+	var element=document.getElementById("ta");
+	var jv=DoTransLitrate(element.value);
+	var pre_view_element=document.getElementById("prev_label");
+	pre_view_element.innerHTML=jv;
+}
+function DoPreview(){
+	var text=$("#inp_txt").val();
+	var trans_text= DoTransLitrate(text);
+	$("#prev_label").text(trans_text);
+}
+function DoAppendTranliteration(){
+  var currentText=$("#ta").val();
+
+  var text=$("#inp_txt").val();
+   if(text.toLowerCase()=='clear'){
+   /*typing clear in the inputbox is very tempting.. lets write a hack.*/
+    $("#inp_txt").val('');
+    $("#ta").val('');
+    return;
+  }
+  var trans_text= DoTransLitrate(text);
+  var finalText=currentText+' '+trans_text;
+  $("#ta").val(finalText);
+   $("#inp_txt").val('');
+}
+$(document).ready(function () {
+	$('#inp_txt').keydown(function(event) {
+		  if (event.keyCode == '13') {
+		      	DoAppendTranliteration();
+		   }
+	});
+
+	$('#inp_txt').keyup(function() {
+		DoPreview();
+	});
+	DoPreview();
+    });
+// ]]>
+</script>
+<style>
+h3
+{
+  font-size:120%;
+}
+.main_ta
+{
+   width:100%;
+   height:250px;
+   text-align:left;
+   font-size:150%;
+}
+.tb
+{
+   width:100%;
+   font-size:150%;
+}
+.gb:hover
+{
+	border-color:#ccc;
+	background:#ccc;
+}
+.gb
+{
+	margin:10px;
+	border-style:solid;
+        border-width:10px;
+	border-color:#eeeeee;
+	background:#eeeeee;
+	filter:alpha(opacity=100);
+        opacity:1;
+}
+
+#prev_label
+{
+	color:dodgerblue;
+	font-size:150%;
+}
+.code
+{
+   background:black;
+   color:green;
+}
+</style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -28,8 +122,8 @@
         </ul>
       </header>
       <section>
-        <h3>Welcome to GitHub Pages.</h3>
-
+        <h3>Welcome to Javanese Transliterator.</h3>
+<!--
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
 <pre><code>$ cd your_repo_root/repo_name
@@ -54,6 +148,25 @@ $ git checkout gh-pages
 <h3>Support or Contact</h3>
 
 <p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+-->
+<div id="doc2" class="yui-t7">
+<div id="hd" role="banner"><a href="http://www.purplegene.com/"><h1>Javanese<span>Transliteration</span></h1></a>  </div>
+Achieve Javanese Transliteration offline, in javascript
+<hr>
+<div id="bd" role="main">
+<div id="transdiv" class="gb">
+<h3>Preview</h3>
+<div id="prev_label"></div>
+<h3>Input text here, press enter to feed into main textbox</h3>
+<input id="inp_txt" class="tb" type="text">
+</div>
+<div id="output" class="gb">
+<h3>You can compose text here, for transliteration type in textbox above.</h3>
+<textarea id="ta" class="main_ta"></textarea>
+</div>
+</div>
+</div>
+
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/bennylin">bennylin</a></p>
