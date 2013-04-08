@@ -107,6 +107,14 @@ h3
     <![endif]-->
   </head>
   <body>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <div class="wrapper">
       <header>
         <h2>Transliterasi Jawa</h2>
@@ -178,6 +186,7 @@ Sumber (Derived from): <a href="http://www.purplegene.com/static/HindiTranslitra
       <footer>
         <p>This project is maintained by <a href="https://github.com/bennylin">bennylin</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <div class="fb-comments" data-href="http://bennylin.github.io/transliterasijawa/" data-width="470" data-num-posts="10"></div>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
