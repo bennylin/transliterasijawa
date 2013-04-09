@@ -11,8 +11,9 @@ Javanese Transliteration
 
 To do list
 ----------
-* Cecak, cakra, pengkal, belum bisa tertampil
+* Cecak, cakra, pengkal belum bisa tertampil
 * Aksara murda belum bisa tertampil
+* Pa cerek, nga lelet belum bisa tertampil
 
 Pranala luar
 ------------
