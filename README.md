@@ -11,9 +11,9 @@ Javanese Transliteration
 
 To do list
 ----------
-* Cecak, cakra, pengkal belum bisa tertampil
+* <s>Cecak, cakra, pengkal belum bisa tertampil</s> (fixed 0.3 / 9 April)
+* <s>Pa cerek, nga lelet belum bisa tertampil</s> (fixed 0.3 / 9 April)
 * Aksara murda belum bisa tertampil
-* Pa cerek, nga lelet belum bisa tertampil
 
 Pranala luar
 ------------
