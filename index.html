@@ -29,7 +29,7 @@ var text=$("#inp_txt").val();
 var trans_text= DoTransliterate(text);
 $("#prev_label").text(trans_text);
 }
-function DoAppendTranliteration(){
+function DoAppendTransliteration(){
   var currentText=$("#ta").val();
 
   var text=$("#inp_txt").val();
@@ -39,7 +39,7 @@ function DoAppendTranliteration(){
     $("#ta").val('');
     return;
   }
-  var trans_text= DoTransLitrate(text);
+  var trans_text= DoTransliterate(text);
   var finalText=currentText+' '+trans_text;
   $("#ta").val(finalText);
    $("#inp_txt").val('');
@@ -47,7 +47,7 @@ function DoAppendTranliteration(){
 $(document).ready(function () {
 $('#inp_txt').keydown(function(event) {
 if (event.keyCode == '13') {
-DoAppendTranliteration();
+DoAppendTransliteration();
 }
 });
 
