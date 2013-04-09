@@ -106,7 +106,7 @@ font-size:150%;
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
   </head>
-  <body>
+  <body onload="document.getElementById('inp_txt').focus();">
   <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -168,7 +168,7 @@ Questions can be addressed to: <a href="http://facebook.com/jvwiki">Facebook</a>
 <h3>Preview</h3>
 <div id="prev_label"></div>
 <h3>Input text here, press enter to feed into main textbox</h3>
-<input id="inp_txt" class="tb" type="text">
+<textarea id="inp_txt" class="tb"></textarea>
 </div>
 <div id="output" class="gb">
 <h3>You can compose text here, for transliteration type in textbox above.</h3>
@@ -186,7 +186,7 @@ Questions can be addressed to: <a href="http://facebook.com/jvwiki">Facebook</a>
          <li>Apabila Anda telah mencoba situs ini, silakan tuliskan pengalaman Anda, baik dalam bentuk blog maupun tulisan lainnya, akan kami publikasikan/link-kan di sini.</li>
         </ul></li>
         <li>8 April -- Situs pindah ke Github. Transliterasi sudah bisa bekerja secara online. (v0.2). Tambah Facebook Comment.</li>
-        <li>9 April -- Kode trans.js dipindah ke http://id.wikipedia.org/wiki/Pengguna:Bennylin/trans.js supaya lebih mudah disunting.</li>
+        <li>9 April -- Kode trans.js dipindah ke <a href="http://id.wikipedia.org/wiki/Pengguna:Bennylin/trans.js">Wikipedia</a> supaya lebih mudah disunting. Fix cakra, pengkal, cecak, pa cerek, nga lelet. (v0.3)</li>
       </ul>
 </div>
 <small>Sumber (Derived from): <a href="http://www.purplegene.com/static/HindiTranslitration.html">Hindi Transliteration</a> by Markandey Singh @markandey (Feb 9 2011). Dual licensed under the MIT or GPL Version 2 licenses. Released under the MIT, BSD, and GPL Licenses.</small>
