@@ -16,16 +16,16 @@
 function init_document()
 {
 	var element=document.getElementById("ta");
-	var jv=DoTransLitrate(element.value);
+	var jv=DoTransliterate(element.value);
 	var pre_view_element=document.getElementById("prev_label");
 	pre_view_element.innerHTML=jv;
 }
 function DoPreview(){
 	var text=$("#inp_txt").val();
-	var trans_text= DoTransLitrate(text);
+	var trans_text= DoTransliterate(text);
 	$("#prev_label").text(trans_text);
 }
-function DoAppendTranliteration(){
+function DoAppendTransliteration(){
   var currentText=$("#ta").val();
 
   var text=$("#inp_txt").val();
@@ -35,7 +35,7 @@ function DoAppendTranliteration(){
     $("#ta").val('');
     return;
   }
-  var trans_text= DoTransLitrate(text);
+  var trans_text= DoTransliterate(text);
   var finalText=currentText+' '+trans_text;
   $("#ta").val(finalText);
    $("#inp_txt").val('');
@@ -43,7 +43,7 @@ function DoAppendTranliteration(){
 $(document).ready(function () {
 	$('#inp_txt').keydown(function(event) {
 		  if (event.keyCode == '13') {
-		      	DoAppendTranliteration();
+		      	DoAppendTransliteration();
 		   }
 	});
 
@@ -99,7 +99,7 @@ h3
 }
 </style>
     </head>
-    <body>
+    <body onload="document.getElementById('inp_txt').focus();">
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -117,7 +117,7 @@ h3
 	                  <h3>Preview</h3>
 			  <div id="prev_label"></div>
 			  <h3>Input text here, press enter to feed into main textbox</h3>
-			  <input id="inp_txt" class="tb" type="text">
+			  <textarea id="inp_txt" class="tb"></textarea>
 	    		</div>
 			<div id="output" class="gb">
 			  <h3>You can compose text here, for transliteration type in textbox above.</h3>
