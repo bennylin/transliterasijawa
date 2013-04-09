@@ -1,7 +1,5 @@
-transliterasijawa
-=================
-
-=Javanese Transliteration=
+Javanese Transliteration
+========================
 
 *adalah transliterator (pengalihaksara) Latin-Jawa
 *adalah sebuah proyek kecil oleh Bennylin[1] yang dibuat menggunakan javascript.
@@ -11,11 +9,13 @@ transliterasijawa
 *terus menerima input/masukan dari Anda, para penggunanya
 *bersumber terbuka, bebas diduplikasi maupun dikembangkan
 
-==To do list==
+To do list
+==========
 *Cecak, cakra, pengkal, belum bisa tertampil
 *Aksara murda belum bisa tertampil
 
-==Pranala luar==
+Pranala luar
+============
 1. http://jv.wikipedia.org/wiki/Dhiskusi_Panganggo:Bennylin
 2. http://jv.wikipedia.org/wiki/Panganggo:Bennylin/Narayam
 
@@ -32,7 +32,8 @@ Lebih lanjut tentang Aksara Jawa, lihat:
 *http://id.wikipedia.org/wiki/Aksara_Jawa, terutama bagian: 
 *http://id.wikipedia.org/wiki/Aksara_Jawa#Integrasi_Hanacaraka_ke_dalam_sistem_informasi_komputer
 
-==Hubungi saya==
+Hubungi saya
+============
 1. Wikipedia http://id.wikipedia.org/wiki/Pembicaraan_Pengguna:Bennylin
 2. Twitter @bennylin
 3. Facebook /bennylin.solo
