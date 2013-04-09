@@ -49,7 +49,7 @@ function isSpecial( /*char*/ a) {
     var str = "hgyr"; //untuk bikonsonan th, dh, ng (nga dan cecak), ny, -r- (cakra), -y- (pengkal)
    return findstr(str,a);
 }
- 
+    
 function isHR( /*char*/ a) {
     var str = "hr";//untuk layar dan wignyan
     return findstr(str,a);
@@ -94,17 +94,31 @@ Function GetShift
 apabila huruf bikonsonan, return karakter khusus
 ****************************/
 function GetShift(str) {
- 
+
     if (str.indexOf("th") == 0) { //suku kata diawali 'th'
+        if (str.indexOf("r") == 2) { //cakra
+        return {
+            "CoreSound": "ꦛꦿ",
+            "len": 3
+        };
+        } else {
         return {
             "CoreSound": "ꦛ",
             "len": 2
         };
+        }
     } else if (str.indexOf("dh") == 0) { //suku kata diawali 'dh'
+        if (str.indexOf("r") == 2) { //cakra
+        return {
+            "CoreSound": "ꦝꦿ",
+            "len": 3
+        };
+        } else {
         return {
             "CoreSound": "ꦝ",
             "len": 2
         };
+        }
     } else if (str.indexOf("h") >= 1) { //suku kata memiliki konsonan 'h' yang tidak di awal suku
         var sound = "";
         var len = 0;
@@ -127,10 +141,17 @@ function GetShift(str) {
  
  
     if (str.indexOf("ng") == 0) { //suku kata diawali 'ng'
+        if (str.indexOf("r") == 2) { //cakra
+        return {
+            "CoreSound": "ꦔꦿ",
+            "len": 3
+        };
+        } else {
         return {
             "CoreSound": "ꦁ",
             "len": 2
         };
+        }
     } else if (str.indexOf("g") >= 1) { //suku kata memiliki konsonan 'g' yang tidak di awal suku
         var sound = "";
         var len = 0;
@@ -152,10 +173,17 @@ function GetShift(str) {
     }
  
     if (str.indexOf("ny") == 0) { //suku kata diawali 'ny'
+        if (str.indexOf("r") == 2) { //cakra
+        return {
+            "CoreSound": "ꦚꦿ",
+            "len": 3
+        };
+        } else {
         return {
             "CoreSound": "ꦚ",
             "len": 2
         };
+        }
     } else if (str.indexOf("y") == 1) { //pengkal
         return {
             "CoreSound": "" + GetCoreSound(str[0]).CoreSound + "ꦾ",
@@ -199,6 +227,7 @@ function GetCoreSound(str) {
     var soundmap = "ꦄꦧꦕꦢꦌꦥꦒꦃꦆꦗꦏꦭꦩꦤꦎꦥꦐꦂꦱꦠꦈꦥꦮꦼꦪꦗ";
     var len = 1;
     var h_shift = GetShift(str);
+
     if (h_shift["CoreSound"] == null) {
         var position = ((str.charCodeAt(0)) - 'a'.charCodeAt(0));
         if (position < soundmap.length && position >= 0) { //position < 26 && position >= dari huruf 'a'
@@ -273,7 +302,10 @@ function GetSound(str) {
                 matra = GetMatra(str.substring(core_sound.len)); //aeiou (suku, wulu, pepet, taling, taling tarung, dll.)
             } else {
                 matra = ""; }
-        if (core_sound.CoreSound == 'ꦃ' && matra != "꧀") { // wignyan
+        if (core_sound.CoreSound == 'ꦛꦿ' || core_sound.CoreSound == 'ꦝꦿ' || core_sound.CoreSound == 'ꦔꦿ' || core_sound.CoreSound == 'ꦚꦿ') { // i.e. nyruput
+            konsonan = core_sound.CoreSound;
+            if (matra == "꧀") matra = "";
+        } else if (core_sound.CoreSound == 'ꦃ' && matra != "꧀") { // wignyan
             konsonan = "ꦲ"; //ha
         } else if (core_sound.CoreSound == 'ꦂ' && matra == "ꦼ") { // pa cerek
             konsonan = "ꦉ"; matra = "";//rê
