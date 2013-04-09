@@ -20,13 +20,13 @@
 function init_document()
 {
 var element=document.getElementById("ta");
-var jv=DoTransLitrate(element.value);
+var jv=DoTransliterate(element.value);
 var pre_view_element=document.getElementById("prev_label");
 pre_view_element.innerHTML=jv;
 }
 function DoPreview(){
 var text=$("#inp_txt").val();
-var trans_text= DoTransLitrate(text);
+var trans_text= DoTransliterate(text);
 $("#prev_label").text(trans_text);
 }
 function DoAppendTranliteration(){
