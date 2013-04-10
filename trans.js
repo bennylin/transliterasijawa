@@ -348,8 +348,25 @@ function DoTransliterate(str) {
             if (str[i] == ' ') {
                 ret += ''; }
             if (isPunct(str[i])) {
+             if (str[i] == '.') {
+                ret += "꧉";
+                pi = i + 1;
+             } else if (str[i] == ',') {
+                ret += "꧈";
+                pi = i + 1;
+             } else if (str[i] == '|') {
+                ret += "꧋";
+                pi = i + 1;
+             } else if (str[i] == '(') {
+                ret += "꧌";
+                pi = i + 1;
+             } else if (str[i] == ')') {
+                ret += "꧍";
+                pi = i + 1;
+             } else {
                 ret += str[i];
                 pi = i + 1;
+             }
             } else if (isDigit(str[i])) {
                 var digi = "" + (str[i] - '0');
                 ret += digi;
