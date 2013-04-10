@@ -6,10 +6,12 @@
 * Dual licensed under the MIT or GPL Version 2 licenses.
 * Released under the MIT, BSD, and GPL Licenses.
 *
-* Date: 9 April 2013 - v 0.3
-* Source code by Markandey Singh @markandey
+* Date: 10 April 2013 - v 0.4
+*
+*
+*
+* Derived from Hindi Transliteration by Markandey Singh @markandey
 * http://www.purplegene.com/static/HindiTranslitration.html
- 
 */
  
 /***************************
@@ -34,7 +36,7 @@ function isDigit( /*char*/ a) {
     return findstr(str,a);
 }
 function isPunct( /*char*/ a) {
-    var str = ",.><?/+=-_}{[]*&^%$#@!~`\"\\|:;";
+    var str = ",.><?/+=-_}{[]*&^%$#@!~`\"\\|:;()";
     return findstr(str,a);
 }
 function isVowel( /*char*/ a) {
@@ -46,7 +48,7 @@ Function isSpecial, isHR
 cek apakah karakter spesial (bikonsonan/cakra-pengkal/layar-cecak-wignyan)
 ****************************/
 function isSpecial( /*char*/ a) {
-    var str = "hgyr"; //untuk bikonsonan th, dh, ng (nga dan cecak), ny, -r- (cakra), -y- (pengkal)
+    var str = "ghry"; //untuk bikonsonan th, dh, ng (nga dan cecak), ny, -r- (cakra), -y- (pengkal)
    return findstr(str,a);
 }
     
@@ -119,7 +121,17 @@ function GetShift(str) {
             "len": 2
         };
         }
-    } else if (str.indexOf("h") >= 1) { //suku kata memiliki konsonan 'h' yang tidak di awal suku
+    } else if (str.indexOf("hy") == 0) { //hyang
+        return {
+            "CoreSound": "" + GetCoreSound(str[0]).CoreSound + "ꦲꦾ",
+            "len": 1
+        };
+    } else if (str.indexOf("h") == 1) { //h
+        return {
+            "CoreSound": "" + GetCoreSound(str[0]).CoreSound + "꧀ꦲ",
+            "len": 2
+        };
+    } else if (str.indexOf("h") > 1) { //suku kata memiliki konsonan 'h' yang tidak di awal suku
         var sound = "";
         var len = 0;
         var index = 0;
@@ -152,7 +164,12 @@ function GetShift(str) {
             "len": 2
         };
         }
-    } else if (str.indexOf("g") >= 1) { //suku kata memiliki konsonan 'g' yang tidak di awal suku
+    } else if (str.indexOf("g") == 1) { //g
+        return {
+            "CoreSound": "" + GetCoreSound(str[0]).CoreSound + "꧀ꦒ",
+            "len": 2
+        };
+    } else if (str.indexOf("g") > 1) { //suku kata memiliki konsonan 'g' yang tidak di awal suku
         var sound = "";
         var len = 0;
         var index = 0;
@@ -232,10 +249,16 @@ function GetCoreSound(str) {
         var position = ((str.charCodeAt(0)) - 'a'.charCodeAt(0));
         if (position < soundmap.length && position >= 0) { //position < 26 && position >= dari huruf 'a'
             var coresnd = "" + soundmap[position];
-            return {
-                "CoreSound": coresnd,
-                "len": len
-            };
+            if (position == 5 || position == 21 || position == 25)
+                return {
+                    "CoreSound": coresnd+"꦳",
+                    "len": len
+                };
+            else
+                return {
+                    "CoreSound": coresnd,
+                    "len": len
+                };
         }
         len = 1;
         return {
@@ -248,9 +271,9 @@ function GetCoreSound(str) {
 }
 function GetSpecialSound(str) {
     specialsoundMap={
-        "f":"ꦥ꦳",
-        "v":"ꦥ꦳",
-        "z":"ꦗ꦳",
+        "f":"ꦥ꦳꧀",
+        "v":"ꦥ꦳꧀",
+        "z":"ꦗ꦳꧀",
         "q":"꧀",//pangkon
     }
     if(specialsoundMap[str]!==undefined){
@@ -284,14 +307,16 @@ fungsi yang mentransliterasi masing-masing suku kata
 ****************************/
 function GetSound(str) {
     var len = 0;
+    var test= " ";
     str = SuperTrim(str.toLowerCase());
     if (str == null || str == "") {
         return "";
-    }
-    var SpecialSound = GetSpecialSound(str);
-    if (SpecialSound != null) {
+    } 
+        var SpecialSound = GetSpecialSound(str);
+    
+    if (SpecialSound != null && str.length == 1) {
         return SpecialSound;
-    }
+    } 
     if (str.length == 1) {
         return ResolveCharacterSound(str[0]);
     } else {
@@ -305,6 +330,8 @@ function GetSound(str) {
         if (core_sound.CoreSound == 'ꦛꦿ' || core_sound.CoreSound == 'ꦝꦿ' || core_sound.CoreSound == 'ꦔꦿ' || core_sound.CoreSound == 'ꦚꦿ') { // i.e. nyruput
             konsonan = core_sound.CoreSound;
             if (matra == "꧀") matra = "";
+        } else if (core_sound.CoreSound == "ꦃꦲꦾ") { // hyang
+            konsonan = "ꦲꦾ";//hyang
         } else if (core_sound.CoreSound == 'ꦃ' && matra != "꧀") { // wignyan
             konsonan = "ꦲ"; //ha
         } else if (core_sound.CoreSound == 'ꦂ' && matra == "ꦼ") { // pa cerek
