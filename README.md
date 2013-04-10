@@ -13,9 +13,10 @@ To do list
 ----------
 * <s>Cecak, cakra, pengkal belum bisa tertampil</s> (fixed 0.3 / 9 April)
 * <s>Pa cerek, nga lelet belum bisa tertampil</s> (fixed 0.3 / 9 April)
+* <s>Tanda baca belum bisa tertampil</s> (fixed 0.4 / 9 April)
+* <s>Aksara rekan (f/v/z) + sandhangan suara belum menyatu</s> (fixed 0.4 / 9 April)
 * Aksara murda belum bisa tertampil
 * Angka belum bisa tertampil
-* Tanda baca belum bisa tertampil
 
 Pranala luar
 ------------
