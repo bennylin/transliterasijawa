@@ -14,6 +14,7 @@
     <meta name="description" content="A simple javascript based page to transliterate from Latin Script to Javanese Script (of Indonesia)">
     <script src="http://jv.wikipedia.org/w/index.php?title=Panganggo:Bennylin/trans.js&amp;action=raw&amp;ctype=text/javascript" type="text/javascript" language="javascript" charset="utf-8"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+<script src="transliterator.js" type="text/javascript" language="javascript" charset="utf-8"></script>
 <script type="text/javascript" language="javascript" charset="utf-8">
 
 // <![CDATA[
@@ -172,7 +173,10 @@ Questions can be addressed to: <a href="http://facebook.com/jvwiki">Facebook</a>
 </div>
 <div id="output" class="gb">
 <h3>You can compose text here, for transliteration type in textbox above.</h3>
-<textarea id="ta" class="main_ta"></textarea>
+        <form name="formText">
+  		     <textarea id="ta" class="main_ta" name="editSrc"></textarea>
+           <input onclick="transliterate(java2latn)" name="buttonConvert" type="button" value="jawa &gt; latin" /><input type="reset" value="reset" />
+        </form>
 </div>
 </div>
 <span style="float:right;width:200px"><a href="http://via.me/-b5mnbwq"><img src="http://img.viame-cdn.com/photos/3ff50970-8142-0130-ff05-12313b101ad9/r600x600.jpg"></a></span>
@@ -188,6 +192,7 @@ Questions can be addressed to: <a href="http://facebook.com/jvwiki">Facebook</a>
         <li>8 April -- Situs pindah ke Github. Transliterasi sudah bisa bekerja secara online. (v0.2). Tambah Facebook Comment.</li>
         <li>9 April -- Kode trans.js dipindah ke <a href="http://id.wikipedia.org/wiki/Pengguna:Bennylin/trans.js">Wikipedia</a> supaya lebih mudah disunting. Fix cakra, pengkal, cecak, pa cerek, nga lelet. (v0.3)</li>
         <li>10 April -- v0.4 -- Tanda baca (. , ( ) |), aksara rekan (f, v, z) menyatu dengan sandhangan swara, "hyang" tertampil dengan benar.</li>
+        <li>11 April -- v0.5 -- Update jquery, tambahi transliterasi balik (Jawa -> Latin)</li>
       </ul>
 </div>
 <small>Sumber (Derived from): <a href="http://www.purplegene.com/static/HindiTranslitration.html">Hindi Transliteration</a> by Markandey Singh @markandey (Feb 9 2011). Dual licensed under the MIT or GPL Version 2 licenses. Released under the MIT, BSD, and GPL Licenses.</small>
