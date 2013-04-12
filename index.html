@@ -1,129 +1,32 @@
-<html><head>
+<html>
+<head><title>Javanese Transliteration (offline): Achieve Javanese Transliteration offline, in javascript</title>
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-        <title>Javanese Transliteration (offline):Achieve Javanese Transliteration offline, in javascript</title>
-        <link rel="stylesheet" href="reset-fonts-grids.css" type="text/css">
-        <link rel="stylesheet" href="main.css" type="text/css">
-        <link rel="shortcut icon" href="favicon.ico">
-  <meta name="keywords" content="twitter,REST, API, realtime, search,JavaScript ,tweetactiveindex, activeness, friends">
-        <meta name="description" content="Ajax Hack Playground,hacks,examples">
-<script src="jquery.js" type="text/javascript" language="javascript" charset="utf-8">
-</script>
-<script src="trans.js" type="text/javascript" language="javascript" charset="utf-8">
-</script>
-<script type="text/javascript" language="javascript" charset="utf-8">
-
-// <![CDATA[
-function init_document()
-{
-	var element=document.getElementById("ta");
-	var jv=DoTransliterate(element.value);
-	var pre_view_element=document.getElementById("prev_label");
-	pre_view_element.innerHTML=jv;
-}
-function DoPreview(){
-	var text=$("#inp_txt").val();
-	var trans_text= DoTransliterate(text);
-	$("#prev_label").text(trans_text);
-}
-function DoAppendTransliteration(){
-  var currentText=$("#ta").val();
-
-  var text=$("#inp_txt").val();
-   if(text.toLowerCase()=='clear'){
-   /*typing clear in the inputbox is very tempting.. lets write a hack.*/
-    $("#inp_txt").val('');
-    $("#ta").val('');
-    return;
-  }
-  var trans_text= DoTransliterate(text);
-  var finalText=currentText+' '+trans_text;
-  $("#ta").val(finalText);
-   $("#inp_txt").val('');
-}
-$(document).ready(function () {
-	$('#inp_txt').keydown(function(event) {
-		  if (event.keyCode == '13') {
-		      	DoAppendTransliteration();
-		   }
-	});
-
-	$('#inp_txt').keyup(function() {
-		DoPreview();
-	});
-	DoPreview();
-    });
-// ]]>
-</script>
-<style>
-h3
-{
-  font-size:120%;
-}
-.main_ta
-{
-   width:100%;
-   height:250px;
-   text-align:left;
-   font-size:150%;
-}
-.tb
-{
-   width:100%;
-   font-size:150%;
-}
-.gb:hover
-{
-	border-color:#ccc;
-	background:#ccc;
-}
-.gb
-{
-	margin:10px;
-	border-style:solid;
-        border-width:10px;
-	border-color:#eeeeee;
-	background:#eeeeee;
-	filter:alpha(opacity=100);
-        opacity:1;
-}
-
-#prev_label
-{
-	color:dodgerblue;
-	font-size:150%;
-}
-.code
-{
-   background:black;
-   color:green;
-}
-</style>
-    </head>
-    <body onload="document.getElementById('inp_txt').focus();">
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-        <div id="doc2" class="yui-t7">
-            <div id="hd" role="banner"><a href="http://bennylin.github.com/transliterasijawa/"><h1>Javanese<span>Transliteration</span></h1></a>  </div>
-		Achieve Javanese Transliteration offline, in javascript
-            <hr>
-            <div id="bd" role="main">
-			<div id="transdiv" class="gb">
-	                  <h3>Preview</h3>
+<meta name="keywords" content="twitter,REST, API, realtime, search,JavaScript ,tweetactiveindex, activeness, friends">
+<meta name="description" content="Ajax Hack Playground,hacks,examples">
+<link rel="stylesheet" href="reset-fonts-grids.css" type="text/css">
+<link rel="stylesheet" href="main.css" type="text/css">
+<link rel="shortcut icon" href="favicon.ico">
+<script src="jquery.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+<script src="trans.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+<script src="transliterator.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+<script src="script.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+</head>
+<body onload="document.getElementById('inp_txt').focus();">
+  <div id="doc2" class="yui-t7">
+    <div id="hd" role="banner"><a href="http://bennylin.github.io/transliterasijawa/"><h1>Javanese<span>Transliteration</span></h1></a></div><hr>
+    <div id="bd" role="main">
+			<div id="transdiv" class="gb"><h3>Preview</h3>
 			  <div id="prev_label"></div>
 			  <h3>Input text here, press enter to feed into main textbox</h3>
 			  <textarea id="inp_txt" class="tb"></textarea>
-	    		</div>
-			<div id="output" class="gb">
-			  <h3>You can compose text here, for transliteration type in textbox above.</h3>
-			  <textarea id="ta" class="main_ta"></textarea>
+	    </div>
+			<div id="output" class="gb"><h3>You can compose text here, for transliteration type in textbox above.</h3>
+        <form name="formText">
+			    <textarea id="ta" class="main_ta" name="editSrc"></textarea>
+          <input onclick="transliterate(java2latn)" name="buttonConvert" type="button" value="jawa &gt; latin" /><input type="reset" value="reset" /><!--<input onclick="transliterate(latn2java)" name="buttonConvert" type="button" value="latin &gt; jawa" />-->
+        </form>
 			</div>
-			<div class="fb-comments" data-href="http://bennylin.github.com/transliterasijawa" data-width="470" data-num-posts="10"></div>
-            </div>
-        </div>
-</body></html>
+    </div>
+  </div>
+</body>
+</html>
