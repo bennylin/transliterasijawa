@@ -17,6 +17,8 @@ To do list
 * <s>Aksara rekan (f/v/z) + sandhangan suara belum menyatu</s> (fixed 0.4 / 9 April)
 * Aksara murda belum bisa tertampil
 * Angka belum bisa tertampil
+* Penyengauan ('n' diikuti 'j' atau 'c') seyogianya bisa otomatis
+* "ii", "uu", "ai", dan "Ai" di depan kalimat (mis. untuk nama 'Aina=ꦍꦤ)
 
 Pranala luar
 ------------
