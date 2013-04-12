@@ -1,22 +1,22 @@
 Javanese Transliteration
 ========================
 
-* adalah transliterator (pengalihaksara) Latin-Jawa
+* adalah transliterator (pengalihaksara) Latin-Jawa dan Jawa-Latin
 * adalah sebuah proyek kecil oleh Bennylin[1] yang dibuat menggunakan javascript.
 * adalah sebuah situs transliterasi (alih aksara) daring (online) yang juga bisa diunduh secara gratis.
 * masih dalam pengembangan, sehingga masih memiliki banyak ketidaksempurnaan.
 * didasarkan atas proyek Bennylin di Wikipedia bahasa Jawa[2]
-* terus menerima input/masukan dari Anda, para penggunanya
+* terus menerima input/masukan dari Anda, para penggunanya[3]
 * bersumber terbuka, bebas diduplikasi maupun dikembangkan
 
 To do list
 ----------
 * <s>Cecak, cakra, pengkal belum bisa tertampil</s> (fixed 0.3 / 9 April)
 * <s>Pa cerek, nga lelet belum bisa tertampil</s> (fixed 0.3 / 9 April)
-* <s>Tanda baca belum bisa tertampil</s> (fixed 0.4 / 9 April)
-* <s>Aksara rekan (f/v/z) + sandhangan suara belum menyatu</s> (fixed 0.4 / 9 April)
-* Aksara murda belum bisa tertampil
-* Angka belum bisa tertampil
+* <s>Tanda baca belum bisa tertampil</s> (fixed 0.4 / 10 April)
+* <s>Aksara rekan (f/v/z) + sandhangan suara belum menyatu</s> (fixed 0.4 / 10 April)
+* <s>Aksara murda belum bisa tertampil</s> (fixed 0.6 / 12 April)
+* <s>Angka belum bisa tertampil</s> (fixed 0.6 / 12 April)
 * Penyengauan ('n' diikuti 'j' atau 'c') seyogianya bisa otomatis
 * "ii", "uu", "ai", dan "Ai" di depan kalimat (mis. untuk nama 'Aina=ꦍꦤ)
 
@@ -24,6 +24,7 @@ Pranala luar
 ------------
 1. http://jv.wikipedia.org/wiki/Dhiskusi_Panganggo:Bennylin
 2. http://jv.wikipedia.org/wiki/Panganggo:Bennylin/Narayam
+3. http://facebook.com/groups/aksara.jawa
 
 Untuk Unicode Aksara Jawa, lihat:
 * http://jv.wikipedia.org/wiki/Wikipedia:Unicode
