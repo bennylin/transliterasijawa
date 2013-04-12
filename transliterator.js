@@ -5,7 +5,7 @@
 * Copyright 2013, Bennylin @bennylin
 * Released under the CC-BY-SA.
 *
-* Date: 12 April 2013 - v 0.6
+* Date: 11 April 2013 - v 0.5
 *
 *
 *
