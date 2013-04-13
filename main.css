@@ -9,25 +9,20 @@
     font-style: normal;
 }
 
-body, html
-{
+body, html{
   //background:#e0e0e0;
 	color: #000;
 }
-#hd a:link,a:visited
-{
+#hd a:link,a:visited{
     text-decoration:none;
 }
-#prev_label
-{
+#prev_label{
     line-height: 3em;
 }
-.gb
-{
+.gb, .main_ta, .tb{
     font-family: 'Tuladha Jejeg';
 }
-img
-{
+img{
     border: 0px none ;
     display: block;
     float: none;
@@ -46,64 +41,50 @@ img
     margin: 1em auto;
     position: relative;
 }
-h1, h2, h3, h4, h5, h5, form
-{
+h1, h2, h3, h4, h5, h5, form{
 	font-family: 'arial rounded mt bold' , 'lucida grande' , arial, sans-serif;
 	margin-top: 0;
 }
-h1
-{
+h1{
 	font-size: 38px;
 }
-h2
-{
+h2{
     font-size:150%;
 }
-strong
-{
+strong{
     font-size:110%;
     font-weight:bold;
 }
-h1, h2, h3
-{
+h1, h2, h3{
 	color: #6600cc;
 }
-h1 span, h2 span, h3 span
-{
+h1 span, h2 span, h3 span{
 	color: #00cc00;
 }
 
-h1 span span, h2 span span, h3 span span
-{
+h1 span span, h2 span span, h3 span span{
 	color: #000000;
 	font-size:80%;
 }
 
-#seperator
-{
+#seperator{
     width:950px;
     height:2px;
     background-color:#6600cc;
 }
-#tweet a:link,#tweet a:visited
-{
+#tweet a:link,#tweet a:visited{
     text-decoration:underline;
     font-weight:bold
 }
 
 #topmenu {
-
 	margin: 0 0 10px 0;
-
 }
 .yuimenubar {
     background: #6600cc;
 }
 
-
-
-.formbox
-{
+.formbox{
 margin-top:5px;
 margin-bottom:5px;
 position:relative;
@@ -131,8 +112,7 @@ border-radius:4px;
 -moz-border-radius:4px;
 -webkit-border-radius:4px;
 }
-.cntrctnr
-{
+.cntrctnr{
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
