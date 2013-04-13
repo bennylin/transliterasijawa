@@ -1,10 +1,10 @@
 /* Via Font Squirrel (http://www.fontsquirrel.com) */
 @font-face {
     font-family: 'Tuladha Jejeg';
-    src: url('http://github.com/wikimedia/mediawiki-extensions-WebFonts/blob/master/fonts/Java/TuladhaJejeg_gr.eot');
-    src: url('http://github.com/wikimedia/mediawiki-extensions-WebFonts/blob/master/fonts/Java/TuladhaJejeg_gr.eot?#iefix') format('embedded-opentype'),
-         url('https://github.com/wikimedia/mediawiki-extensions-WebFonts/blob/master/fonts/Java/TuladhaJejeg_gr.woff') format('woff'),
-         url('https://github.com/wikimedia/mediawiki-extensions-WebFonts/blob/master/fonts/Java/TuladhaJejeg_gr.ttf') format('truetype');
+    src: url('http://bits.wikimedia.org/static-1.22wmf1/extensions/WebFonts/fonts/Java/TuladhaJejeg_gr.eot');
+    src: url('http://bits.wikimedia.org/static-1.22wmf1/extensions/WebFonts/fonts/Java/TuladhaJejeg_gr.eot?#iefix') format('embedded-opentype'),
+         url('http://bits.wikimedia.org/static-1.22wmf1/extensions/WebFonts/fonts/Java/TuladhaJejeg_gr.woff') format('woff'),
+         url('http://bits.wikimedia.org/static-1.22wmf1/extensions/WebFonts/fonts/Java/TuladhaJejeg_gr.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -13,7 +13,6 @@ body, html
 {
   //background:#e0e0e0;
 	color: #000;
-	font-family: 'Tuladha Jejeg';
 }
 #hd a:link,a:visited
 {
