@@ -17,8 +17,10 @@ To do list
 * <s>Aksara rekan (f/v/z) + sandhangan suara belum menyatu</s> (fixed 0.4 / 10 April)
 * <s>Aksara murda belum bisa tertampil</s> (fixed 0.6 / 12 April)
 * <s>Angka belum bisa tertampil</s> (fixed 0.6 / 12 April)
+* Panjingan belum tertampil dengan benar (misalnya dalam "ngliwati")
 * Penyengauan ('n' diikuti 'j' atau 'c') seyogianya bisa otomatis
 * "ii", "uu", "ai", dan "Ai" di depan kalimat (mis. untuk nama 'Aina=ꦍꦤ)
+* Aksara rekan Tyonghwa dan Arab belum bisa tertamil
 
 Pranala luar
 ------------
