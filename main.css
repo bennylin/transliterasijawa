@@ -22,6 +22,10 @@ body, html
 {
     line-height: 3em;
 }
+.gb
+{
+    font-family: 'Tuladha Jejeg';
+}
 img
 {
     border: 0px none ;
