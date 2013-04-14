@@ -21,6 +21,7 @@ To do list
 * Penyengauan ('n' diikuti 'j' atau 'c') seyogianya bisa otomatis
 * "ii", "uu", "ai", dan "Ai" di depan kalimat (mis. untuk nama 'Aina=ꦍꦤ)
 * Aksara rekan Tyonghwa dan Arab belum bisa tertamil
+* Transliterator Mandarin->Jawa
 
 Pranala luar
 ------------
