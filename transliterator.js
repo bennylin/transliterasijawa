@@ -15,17 +15,17 @@ var java2latn = {
 "ꦁ":'ng',//cecak
 "ꦂ":'r',//layar
 "ꦃ":'h',//wignyan
-"ꦄ":'a',//swara-A
-"ꦅ":'i',//I-Kawi -- archaic
-"ꦆ":'i',//I
-"ꦇ":'ii',//Ii -- archaic
-"ꦈ":'u',//U
+"ꦄ":'A',//swara-A
+"ꦅ":'I',//I-Kawi -- archaic
+"ꦆ":'I',//I
+"ꦇ":'Ii',//Ii -- archaic
+"ꦈ":'U',//U
 "ꦉ":'rê',//pa cêrêk
 "ꦊ":'lê',//nga lêlêt
 "ꦋ":'lêu',//nga lêlêt Raswadi -- archaic
-"ꦌ":'e',//E
-"ꦍ":'ai',//Ai
-"ꦎ":'o',//O
+"ꦌ":'E',//E
+"ꦍ":'Ai',//Ai
+"ꦎ":'O',//O
 
 "ꦏ":'ka',
 "ꦐ":'qa',//Ka Sasak
