@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="jv-java" xml:lang="jv"
+<html xmlns="http://www.w3.org/1999/xhtml" lang="jv-java" xml:lang="jv">
 <head>
  <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8" />
  <title>Nulisa Aksara Jawa -- Javanese Transliteration by bennylin</title>
@@ -11,9 +11,7 @@
  <script src="http://bennylin.github.io/transliterasijawa/easytabs.js" type="text/javascript" charset="utf-8"></script>
  <script src="http://jv.wikipedia.org/w/index.php?title=Panganggo:Bennylin/trans.js&amp;action=raw&amp;ctype=text/javascript" type="text/javascript" language="javascript" charset="utf-8"></script>
  <script src="http://bennylin.github.io/transliterasijawa/transliterator.js" type="text/javascript" language="javascript" charset="utf-8"></script>
-
  <script src="http://bennylin.github.io/transliterasijawa/script.js" type="text/javascript" language="javascript" charset="utf-8"></script>
-
  <script type="text/javascript" charset="utf-8">
   $(document).ready(function() {
    $('#container').easyTabs({defaultContent:1});
@@ -31,49 +29,43 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div id="container">
- <div id="header">
-  Nulisa Aksara Jawa </div>
+ <div id="header">Nulisa Aksara Jawa</div>
  <ul class="tabs">
   <li><a href="#home">Home</a></li>
   <li><a href="#about">About &amp Contact</a></li>
   <li><a href="#unicode">Javanese Unicode Block</a></li>
   <li><a href="#faq">FAQ</a></li>
   <li><a href="#resources">Download</a></li>
-
  </ul>
 
  <div id="main_content">
-
    <div id="home">
-
     <div id="bd" role="main">
-    <h1>Cara termudah untuk menulis Aksara Jawa</h1>
-<div id="transdiv" class="gb">
-<h3>Pratayang <abbr title="Teks yang Anda ketik/kopipas akan muncul pratayangnya di sini."><small>[?]</small></abbr></h3>
-<div id="prev_label"></div>
-<h3>Masukkan teks di sini, tekan Enter untuk memasukkan ke textbox utama. <abbr title="Dapat menerima input dalam bahasa Jawa maupun Indonesia"><small>[?]</small></abbr></h3>
-<textarea id="inp_txt" class="tb"></textarea>
-<table width="100%"><tr><td style="width:50%">
-<input type="radio" name="mode" value="ketik">Mode Ketik: 'e' = taling, 'x' = pepet <abbr title="Dalam mode ini, Anda bisa mengetik secara normal. Tombol 'e' digunakan untuk menuliskan taling, sementara tombol 'x' digunakan untuk menuliskan pepet"><small>[?]</small></abbr><br>
-<input type="radio" name="mode" value="kopas" checked="checked">Mode Kopas: 'e' = pepet, 'è'/'é'  = taling <abbr title="Dalam mode ini, Anda bisa kopipas dari artikel yang menggunakan huruf 'e' beraksen (è/é), misalnya dari artikel Wikipedia bahasa Jawa"><small>[?]</small></abbr>
-</td><td style="width:50%">
-<input type="radio" name="spasi" value="without">Tanpa spasi <abbr title="Dalam mode ini, teks akan diperlakukan tanpa ada spasi sama sekali, meskipun Anda menggunakan spasi. Teks tidak dapat dikonvert kembali dengan spasi."><small>[?]</small></abbr><br>
-<input type="radio" name="spasi" value="with" checked="checked">Dengan spasi <abbr title="Dalam mode ini, setiap spasi diubah menjadi zero-width space (spasi selebar nol piksel) yang dapat dikonvert kembali menjadi spasi."><small>[?]</small></abbr>
-</td></tr></table>
-</div>
-<div id="output" class="gb">
-<h3>You can compose text here, for transliteration type in textbox above.</h3>
+      <h1>Cara termudah untuk menulis Aksara Jawa</h1>
+      <div id="transdiv" class="gb">
+        <h3>Pratayang <abbr title="Teks yang Anda ketik/kopipas akan muncul pratayangnya di sini."><small>[?]</small></abbr></h3>
+        <div id="prev_label"></div>
+        <h3>Masukkan teks di sini, tekan Enter untuk memasukkan ke textbox utama. <abbr title="Dapat menerima input dalam bahasa Jawa maupun Indonesia"><small>[?]</small></abbr></h3>
+        <textarea id="inp_txt" class="tb"></textarea>
+        <table width="100%"><tr><td style="width:50%">
+          <input type="radio" name="mode" value="ketik">Mode Ketik: 'e' = taling, 'x' = pepet <abbr title="Dalam mode ini, Anda bisa mengetik secara normal. Tombol 'e' digunakan untuk menuliskan taling, sementara tombol 'x' digunakan untuk menuliskan pepet"><small>[?]</small></abbr><br>
+          <input type="radio" name="mode" value="kopas" checked="checked">Mode Kopas: 'e' = pepet, 'è'/'é'  = taling <abbr title="Dalam mode ini, Anda bisa kopipas dari artikel yang menggunakan huruf 'e' beraksen (è/é), misalnya dari artikel Wikipedia bahasa Jawa"><small>[?]</small></abbr>
+        </td><td style="width:50%">
+          <input type="radio" name="spasi" value="without">Tanpa spasi <abbr title="Dalam mode ini, teks akan diperlakukan tanpa ada spasi sama sekali, meskipun Anda menggunakan spasi. Teks tidak dapat dikonvert kembali dengan spasi."><small>[?]</small></abbr><br>
+          <input type="radio" name="spasi" value="with" checked="checked">Dengan spasi <abbr title="Dalam mode ini, setiap spasi diubah menjadi zero-width space (spasi selebar nol piksel) yang dapat dikonvert kembali menjadi spasi."><small>[?]</small></abbr>
+        </td></tr></table>
+      </div>
+      <div id="output" class="gb">
+        <h3>You can compose text here, for transliteration type in textbox above.</h3>
         <form name="formText">
            <input type="reset" value="reset" />
          <textarea id="ta" class="main_ta" name="editSrc"></textarea>
            <input onclick="transliterate(java2latn)" name="buttonConvert" type="button" value="jawa &gt; latin" />
         </form>
-</div>
-<p><div class="fb-comments" data-href="http://bennylin.github.io/transliterasijawa/" data-width="370" data-num-posts="10"></div
-</p>
-</div>
-
-   </div>
+      </div>
+      <div class="fb-comments" data-href="http://bennylin.github.io/transliterasijawa/" data-width="370" data-num-posts="10"></div>
+    </div>
+  </div>
 
    <div id="about">
 
