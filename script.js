@@ -1,4 +1,4 @@
-
+var text = '""''';
 if (!$.browser.mozilla) text = 'Perhatian: Peramban Anda bukan Firefox. Mungkin Anda tidak dapat melihat aksara Jawa di halaman ini dengan benar. Silakan baca <a href="http://jv.wikipedia.org/wiki/Pitulung:Aksara_Jawa">halaman bantuan ini</a>'
 $('#bd').before('<div>'+text+'</div>');
 
