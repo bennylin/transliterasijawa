@@ -47,10 +47,13 @@
         <div id="prev_label"></div>
         <h3>Masukkan teks di sini, tekan Enter untuk memasukkan ke textbox utama. <abbr title="Dapat menerima input dalam bahasa Jawa maupun Indonesia"><small>[?]</small></abbr></h3>
         <textarea id="inp_txt" class="tb"></textarea>
-        <table width="100%"><tr><td style="width:50%">
+        <table width="100%"><tr><td style="width:33%">
           <input type="radio" name="mode" value="ketik">Mode Ketik: 'e' = taling, 'x' = pepet <abbr title="Dalam mode ini, Anda bisa mengetik secara normal. Tombol 'e' digunakan untuk menuliskan taling, sementara tombol 'x' digunakan untuk menuliskan pepet"><small>[?]</small></abbr><br>
           <input type="radio" name="mode" value="kopas" checked="checked">Mode Kopas: 'e' = pepet, 'è'/'é'  = taling <abbr title="Dalam mode ini, Anda bisa kopipas dari artikel yang menggunakan huruf 'e' beraksen (è/é), misalnya dari artikel Wikipedia bahasa Jawa"><small>[?]</small></abbr>
-        </td><td style="width:50%">
+        </td><td style="width:33%">
+          <input type="radio" name="murda" value="pakai">Mode Murda<br>
+          <input type="radio" name="murda" value="tidak" checked="checked">Mode <s>Murda</s>
+        </td><td style="width:33%">
           <input type="radio" name="spasi" value="without">Tanpa spasi <abbr title="Dalam mode ini, teks akan diperlakukan tanpa ada spasi sama sekali, meskipun Anda menggunakan spasi. Teks tidak dapat dikonvert kembali dengan spasi."><small>[?]</small></abbr><br>
           <input type="radio" name="spasi" value="with" checked="checked">Dengan spasi <abbr title="Dalam mode ini, setiap spasi diubah menjadi 'hair space' (spasi yang sangat tipis) sehingga memunculkan lebih banyak 'pangkon' dan lebih sedikit 'pasangan'."><small>[?]</small></abbr>
         </td></tr></table>
