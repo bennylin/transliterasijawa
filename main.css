@@ -2,10 +2,10 @@
 @font-face {
     font-family: 'Tuladha Jejeg';
     src: local("ꦲꦤꦕꦫꦏ"), 
-         url('http://bits.wikimedia.org/static-1.22wmf1/extensions/WebFonts/fonts/Java/TuladhaJejeg_gr.eot'),
-         url('http://bits.wikimedia.org/static-1.22wmf1/extensions/WebFonts/fonts/Java/TuladhaJejeg_gr.eot?#iefix') format('embedded-opentype'),
-         url('http://bits.wikimedia.org/static-1.22wmf1/extensions/WebFonts/fonts/Java/TuladhaJejeg_gr.woff') format('woff'),
-         url('http://bits.wikimedia.org/static-1.22wmf1/extensions/WebFonts/fonts/Java/TuladhaJejeg_gr.ttf') format('truetype');
+         url('http://bits.wikimedia.org/static-1.22wmf8/extensions/UniversalLanguageSelector/data/fontrepo/fonts/TuladhaJejeg/TuladhaJejeg_gr.eot'),
+         url('http://bits.wikimedia.org/static-1.22wmf8/extensions/UniversalLanguageSelector/data/fontrepo/fonts/TuladhaJejeg/TuladhaJejeg_gr.eot?#iefix') format('embedded-opentype'),
+         url('http://bits.wikimedia.org/static-1.22wmf8/extensions/UniversalLanguageSelector/data/fontrepo/fonts/TuladhaJejeg/TuladhaJejeg_gr.woff') format('woff'),
+         url('http://bits.wikimedia.org/static-1.22wmf8/extensions/UniversalLanguageSelector/data/fontrepo/fonts/TuladhaJejeg/TuladhaJejeg_gr.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,6 +18,7 @@ body, html{
     text-decoration:none;
 }
 #prev_label{
+    font-family: 'Tuladha Jejeg';
     line-height: 3em;
 }
 .gb, .main_ta, .tb{
