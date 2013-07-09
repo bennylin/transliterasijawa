@@ -369,6 +369,7 @@ code {
 	font: 13px Arial, sans-serif;
 }
 
+#home p,
 #faq p,
 #unicode p{
 	line-height: 1.2em;
