@@ -6,6 +6,7 @@
 * Released under the CC-BY-SA.
 *
 * Date: 11 April 2013 - v 0.5
+* Date: 25 Juli 2013 - v 0.6
 *
 *
 *
@@ -29,38 +30,38 @@ var java2latn = {
 
 "ꦏ":'ka',
 "ꦐ":'qa',//Ka Sasak
-"ꦑ":'Ka',//Murda
+"ꦑ":'kha',//Murda
 "ꦒ":'ga',
-"ꦓ":'Ga',//Murda
+"ꦓ":'gha',//Murda
 "ꦔ":'nga',
 "ꦕ":'ca',
-"ꦖ":'Ca',//Murda
+"ꦖ":'cha',//Murda
 "ꦗ":'ja',
 "ꦘ":'Nya',//Ja Sasak, Nya Murda
-"ꦙ":'Ja',//Ja Mahaprana
+"ꦙ":'jha',//Ja Mahaprana
 "ꦚ":'nya',
-"ꦛ":'tha',
-"ꦜ":'Tha',//Murda
-"ꦝ":'dha',
-"ꦞ":'Dha',//Murda
-"ꦟ":'Na',//Murda
+"ꦛ":'ṭa',
+"ꦜ":'ṭha',//Murda
+"ꦝ":'ḍa',
+"ꦞ":'ḍha',//Murda
+"ꦟ":'ṇa',//Murda
 "ꦠ":'ta',
-"ꦡ":'Ta',//Murda
+"ꦡ":'tha',//Murda
 "ꦢ":'da',
-"ꦣ":'Da',//Murda
+"ꦣ":'dha',//Murda
 "ꦤ":'na',
 "ꦥ":'pa',
-"ꦦ":'Pa',//Murda
+"ꦦ":'pha',//Murda
 "ꦧ":'ba',
-"ꦨ":'Ba',//Murda
+"ꦨ":'bha',//Murda
 "ꦩ":'ma',
 "ꦪ":'ya',
 "ꦫ":'ra',
 "ꦬ":'Ra',//Ra Agung
 "ꦭ":'la',
 "ꦮ":'wa',
-"ꦯ":'Sa',//Murda
-"ꦰ":'Sha',//Sa Mahaprana
+"ꦯ":'sha',//Murda
+"ꦰ":'ṣa',//Sa Mahaprana
 "ꦱ":'sa',
 "ꦲ":'ha',//could also be "a" or any sandhangan swara
 
@@ -73,8 +74,8 @@ var java2latn = {
 "ꦹ":'uu',
 "ꦺ":'e',
 "ꦻ":'ai',
-"ꦼ":'ê',
-"ꦽ":'rê',
+"ꦼ":'ě',
+"ꦽ":'rě',
 "ꦾ":'ya',
 "ꦿ":'ra',
 
@@ -121,46 +122,49 @@ var latn2java = {
 "ii":'ꦇ',//Ii -- archaic
 "u":'ꦈ',//U
 "rê":'ꦉ',//pa cêrêk
+"rě":'ꦉ',//pa cěrěk
 "lê":'ꦊ',//nga lêlêt
+"lě":'ꦊ',//nga lělět
 "lêu":'ꦋ',//nga lêlêt Raswadi -- archaic
+"lěu":'ꦋ',//nga lělět Raswadi -- archaic
 "e":'ꦌ',//E
 "ai":'ꦍ',//Ai
 "o":'ꦎ',//O
 
 "ka":'ꦏ',
 "qa":'ꦐ',//Ka Sasak
-"Ka":'ꦑ',//Murda
+"kha":'ꦑ',//Murda
 "ga":'ꦒ',
-"Ga":'ꦓ',//Murda
+"gha":'ꦓ',//Murda
 "nga":'ꦔ',
 "ca":'ꦕ',
-"Ca":'ꦖ',//Murda
+"cha":'ꦖ',//Murda
 "ja":'ꦗ',
 "Nya":'ꦘ',//Ja Sasak, Nya Murda
-"Ja":'ꦙ',//Ja Mahaprana
+"jha":'ꦙ',//Ja Mahaprana
 "nya":'ꦚ',
-"tha":'ꦛ',
-"Tha":'ꦜ',//Murda
-"dha":'ꦝ',
-"Dha":'ꦞ',//Murda
-"Na":'ꦟ',//Murda
+"ṭa":'ꦛ',
+"ṭha":'ꦜ',//Murda
+"ḍa":'ꦝ',
+"ḍha":'ꦞ',//Murda
+"ṇa":'ꦟ',//Murda
 "ta":'ꦠ',
-"Ta":'ꦡ',//Murda
+"tha":'ꦡ',//Murda
 "da":'ꦢ',
-"Da":'ꦣ',//Murda
+"dha":'ꦣ',//Murda
 "na":'ꦤ',
 "pa":'ꦥ',
-"Pa":'ꦦ',//Murda
+"pha":'ꦦ',//Murda
 "ba":'ꦧ',
-"Ba":'ꦨ',//Murda
+"bha":'ꦨ',//Murda
 "ma":'ꦩ',
 "ya":'ꦪ',
 "ra":'ꦫ',
 "Ra":'ꦬ',//Ra Agung
 "la":'ꦭ',
 "wa":'ꦮ',
-"Sa":'ꦯ',//Murda
-"Sha":'ꦰ',//Sa Mahaprana
+"sha":'ꦯ',//Murda
+"ṣa":'ꦰ',//Sa Mahaprana
 "sa":'ꦱ',
 "ha":'ꦲ',//could also be "a" or any sandhangan swara
 
