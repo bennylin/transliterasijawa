@@ -7,8 +7,8 @@
  <meta content="utf-8" http-equiv="encoding">
  <meta http-equiv="X-UA-Compatible" content="text/html;" />
  <title>Nulisa Aksara Jawa -- Javanese Transliteration by bennylin</title>
- <link rel="stylesheet" href="specimen_stylesheet.css" type="text/css" charset="utf-8" />
- <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+ <link rel="stylesheet" href="http://bennylin.github.io/transliterasijawa/specimen_stylesheet.css" type="text/css" charset="utf-8" />
+ <link rel="stylesheet" href="http://bennylin.github.io/transliterasijawa/stylesheet.css" type="text/css" charset="utf-8" />
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
  <script src="http://bennylin.github.io/transliterasijawa/easytabs.js" type="text/javascript" charset="utf-8"></script>
  <script src="http://jv.wikipedia.org/w/index.php?title=Panganggo:Bennylin/trans.js&amp;action=raw&amp;ctype=text/javascript" type="text/javascript" language="javascript" charset="utf-8"></script>
