@@ -250,7 +250,7 @@ function transliterate(regexp_file) {
         } else if (str[i] == "ꦫ" && i > 0 && str[i-1] == "ꦂ") { //double rr
           trans = trans.ganti(j, "");j++;
         } else if (str[i] == "ꦔ" && i > 0 && str[i-1] == "ꦁ") { //double ngng
-          trans = trans.ganti(j, "");j++;
+          trans = trans.ganti(j, "a");j++;
         } else if (str[i] == "ꦴ" || str[i] == "ꦶ" || str[i] == "ꦸ" || str[i] == "ꦺ" || str[i] == "ꦼ") {
           if (str[i] == "ꦴ" && i > 0 && str[i-1] == "ꦺ") //-o
             { trans = trans.ganti2(j, "o"); }
