@@ -40,7 +40,7 @@ var java2latn = {
 "ꦘ":'Nya',//Ja Sasak, Nya Murda
 "ꦙ":'jha',//Ja Mahaprana
 "ꦚ":'nya',
-"ꦛ":'ḍṭa',
+"ꦛ":'ṭa',
 "ꦜ":'ṭha',//Murda
 "ꦝ":'ḍa',
 "ꦞ":'ḍha',//Murda
@@ -266,7 +266,7 @@ function transliterate(regexp_file) {
         /*} else if (str[i] == "꧈" || str[i] == "꧉") { // habis titik atau koma diberi spasi
           trans = trans.ganti(j, regexp_file[str[i]]+" ");j+=2;*/
         } else if (str[i] == " ") {
-          trans = trans.ganti(j, " ");j++;꧋
+          trans = trans.ganti(j, " ");j++;
         } else if (str[i] == "꧋" || str[i] == "꧁" || str[i] == "꧂") {
           trans = trans.ganti(j, "");j++;
         } else {
