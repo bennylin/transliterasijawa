@@ -247,6 +247,7 @@ function transliterate(regexp_file) {
       if (regexp_file[str[i]] && regexp_file["ꦂ"] == "r") { //jawa->latin
         if (str[i] == "ꦲ") { //ha
           if ( i > 0 && (str[i-1] == "ꦼ" || str[i-1] == "ꦺ" || str[i-1] == "ꦶ" || str[i-1] == "ꦴ" || str[i-1] == "ꦸ" || str[i-1] == "ꦄ" || str[i-1] == "ꦌ" || str[i-1] == "ꦆ" || str[i-1] == "ꦎ" || str[i-1] == "ꦈ") ) { trans = trans.ganti(j, "h"+regexp_file[str[i]]);j+=2; }
+          if ( i > 0 && (str[i-1] == "꧊") ) { trans = trans.ganti(j, "H"+regexp_file[str[i]]);j+=2; }
           else { trans = trans.ganti(j, regexp_file[str[i]]);j++; }
         } else if (str[i] == "ꦫ" && i > 0 && str[i-1] == "ꦂ") { //double rr
           trans = trans.ganti(j, "a");j++;
