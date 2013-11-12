@@ -67,7 +67,7 @@ var java2latn = {
 
 "꦳":'​',//cecak telu -- diganti zero-width joiner (tmp)
 "ꦺꦴ":'o',//taling tarung
-"ꦴ":'aa',
+"ꦴ":'a',
 "ꦶ":'i',
 "ꦷ":'ii',
 "ꦸ":'u',
@@ -246,9 +246,10 @@ function transliterate(regexp_file) {
     for (var i = 0, j = 0; i < str.length; i++) {
       if (regexp_file[str[i]] && regexp_file["ꦂ"] == "r") { //jawa->latin
         if (str[i] == "ꦲ") { //ha
-          trans = trans.ganti(j, regexp_file[str[i]]);j++;
+          if ( i > 0 && (str[i-1] == "ꦼ" || str[i-1] == "ꦺ" || str[i-1] == "ꦶ" || str[i-1] == "ꦴ" || str[i-1] == "ꦸ" || str[i-1] == "ꦄ" || str[i-1] == "ꦌ" || str[i-1] == "ꦆ" || str[i-1] == "ꦎ" || str[i-1] == "ꦈ") ) { trans = trans.ganti(j, "h"+regexp_file[str[i]]);j+=2; }
+          else { trans = trans.ganti(j, regexp_file[str[i]]);j++; }
         } else if (str[i] == "ꦫ" && i > 0 && str[i-1] == "ꦂ") { //double rr
-          trans = trans.ganti(j, "");j++;
+          trans = trans.ganti(j, "a");j++;
         } else if (str[i] == "ꦔ" && i > 0 && str[i-1] == "ꦁ") { //double ngng
           trans = trans.ganti(j, "a");j++;
         } else if (str[i] == "ꦴ" || str[i] == "ꦶ" || str[i] == "ꦸ" || str[i] == "ꦺ" || str[i] == "ꦼ") {
@@ -256,8 +257,6 @@ function transliterate(regexp_file) {
             { trans = trans.ganti2(j, "o"); }
           else if (str[i] == "ꦴ" && i > 0 && str[i-1] == "ꦻ") //-au
             { trans = trans.ganti3(j, "au");j++; }
-          else if (str[i] == "ꦴ") 
-            { trans = trans.ganti2(j, "aa");j++; }
           else if ( (str[i] == "ꦶ" || str[i] == "ꦸ" || str[i] == "ꦺ" || str[i] == "ꦼ") && i > 0 && (str[i-1] == "ꦄ" || str[i-1] == "ꦌ" || str[i-1] == "ꦆ" || str[i-1] == "ꦎ" || str[i-1] == "ꦈ") )
             { trans = trans.ganti(j, regexp_file[str[i]]);j++;}
           else 
