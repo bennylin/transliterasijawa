@@ -40,7 +40,7 @@ var java2latn = {
 "ꦘ":'Nya',//Ja Sasak, Nya Murda
 "ꦙ":'jha',//Ja Mahaprana
 "ꦚ":'nya',
-"ꦛ":'ṭa',
+"ꦛ":'ḍṭa',
 "ꦜ":'ṭha',//Murda
 "ꦝ":'ḍa',
 "ꦞ":'ḍha',//Murda
@@ -258,12 +258,17 @@ function transliterate(regexp_file) {
           trans = trans.ganti2(j, regexp_file[str[i]]);
         } else if (str[i] == "ꦏ" || str[i] == "ꦐ" || str[i] == "ꦑ" || str[i] == "ꦒ" || str[i] == "ꦓ" || str[i] == "ꦕ" || str[i] == "ꦖ" || str[i] == "ꦗ" || str[i] == "ꦙ" || str[i] == "ꦟ" || str[i] == "ꦠ" || str[i] == "ꦡ" || str[i] == "ꦢ" || str[i] == "ꦣ" || str[i] == "ꦤ" || str[i] == "ꦥ" || str[i] == "ꦦ" || str[i] == "ꦧ" || str[i] == "ꦨ" || str[i] == "ꦩ" || str[i] == "ꦪ" || str[i] == "ꦫ" || str[i] == "ꦬ" || str[i] == "ꦭ" || str[i] == "ꦮ" || str[i] == "ꦯ" || str[i] == "ꦱ" || str[i] == "ꦲ" || str[i] == "ꦉ" || str[i] == "ꦊ" || str[i] == "ꦁ") {
           trans = trans.ganti(j, regexp_file[str[i]]);j+=2;
-        } else if (str[i] == "ꦔ" || str[i] == "ꦘ" || str[i] == "ꦚ" || str[i] == "ꦛ" || str[i] == "ꦜ" || str[i] == "ꦝ" || str[i] == "ꦞ" || str[i] == "ꦰ" || str[i] == "ꦋ") {
+        } else if (str[i] == "ꦝ" || str[i] == "ꦛ" || str[i] == "ꦰ") { //ḍa & ṭa & ṣa
+          trans = trans.ganti(j, regexp_file[str[i]]);j+=2;
+
+        } else if (str[i] == "ꦔ" || str[i] == "ꦘ" || str[i] == "ꦚ" || str[i] == "ꦜ" || str[i] == "ꦞ" || str[i] == "ꦋ") {
           trans = trans.ganti(j, regexp_file[str[i]]);j+=3;
         /*} else if (str[i] == "꧈" || str[i] == "꧉") { // habis titik atau koma diberi spasi
           trans = trans.ganti(j, regexp_file[str[i]]+" ");j+=2;*/
         } else if (str[i] == " ") {
-          trans = trans.ganti(j, " ");j++;
+          trans = trans.ganti(j, " ");j++;꧋
+        } else if (str[i] == "꧋" || str[i] == "꧁" || str[i] == "꧂") {
+          trans = trans.ganti(j, "");j++;
         } else {
           trans = trans.ganti(j, regexp_file[str[i]]);j++;
         }
