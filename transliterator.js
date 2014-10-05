@@ -296,7 +296,9 @@ function transliterate(regexp_file) {
             else if (str[i] == "ꦮ") { trans = trans.ganti(j, "Wa");j+=2; }
             else if (str[i] == "ꦪ") { trans = trans.ganti(j, "Ya");j+=2; }
             else { trans.ganti(j, regexp_file[str[i]]);j+=3; }
-          } else {
+          } else if (str[i] == "ꦑ" || str[i] == "ꦓ" || str[i] == "ꦖ" || str[i] == "ꦙ" || str[i] == "ꦡ" || str[i] == "ꦣ" || str[i] == "ꦦ" || str[i] == "ꦨ" || str[i] == "ꦯ") {//bha, cha, dha, dll.
+            trans = trans.ganti(j, regexp_file[str[i]]);j+=3;
+          } else {//ba, ca, da, dll.
             trans = trans.ganti(j, regexp_file[str[i]]);j+=2; }
         } else if (str[i] == "ꦰ") { //ṣa
           trans = trans.ganti(j, regexp_file[str[i]]);j+=2;
