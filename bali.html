@@ -1,0 +1,500 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="jv-java" xml:lang="jv">
+<head>
+ <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+ <meta content="utf-8" http-equiv="encoding">
+ <meta http-equiv="X-UA-Compatible" content="text/html;" />
+ <meta property="fb:admins" content="100002305543276"/>
+ <title>Nulisa Aksara Bali -- Balinese Transliteration by bennylin</title>
+ <link rel="stylesheet" href="specimen_stylesheet.css" type="text/css" charset="utf-8" />
+ <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+ <script src="http://bennylin.github.io/transliterasijawa/easytabs.js" type="text/javascript" charset="utf-8"></script>
+ <script src="http://jv.wikipedia.org/w/index.php?title=Panganggo:Bennylin/trans.js&amp;action=raw&amp;ctype=text/javascript" type="text/javascript" language="javascript" charset="utf-8"></script>
+ <script src="http://bennylin.github.io/transliterasijawa/transliterator.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+ <script src="http://bennylin.github.io/transliterasijawa/script.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+ <script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+   $('#container').easyTabs({defaultContent:1});
+  });
+ </script>
+</head>
+
+  <body onload="document.getElementById('inp_txt').focus();">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '788715451208485',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="container">
+ <div id="header">Nulisa Aksara Bali</div>
+ <ul class="tabs">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About &amp; Contact</a></li>
+  <li><a href="#unicode">Balinese Unicode Block</a></li>
+  <li><a href="#faq">FAQ</a></li>
+  <li><a href="#resources">Download</a></li>
+ </ul>
+
+ <div id="main_content">
+   <div id="home">
+    <div id="bd" role="main">
+      <h1>Cara termudah untuk menulis Aksara Bali</h1>
+      <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+      <div id="transdiv" class="gb">
+        <h3>Pratayang <abbr title="Teks yang Anda ketik/kopipas akan muncul pratayangnya di sini."><span style="font-family:Arial; font-size:smaller">[?]</span></abbr></h3>
+        <div id="prev_label"></div>
+        <h3>Masukkan teks di sini, tekan Enter untuk memasukkan ke textbox utama. <abbr title="Dapat menerima input dalam bahasa Bali maupun Indonesia"><span style="font-family:Arial; font-size:smaller">[?]</span></abbr></h3>
+        <p>"Nulisa Aksara Bali" adalah sebuah alat sederhana untuk mengetik aksara Bali dengan keyboard biasa (QWERTY). Cukup ketikkan kata yang Anda inginkan, dan aksara Balinya akan langsung muncul.</p>
+        <p><small>Catatan: "e" menghasilkan taling, "x" menghasilkan pepet. <a href="http://jv.wikipedia.org/wiki/Dhiskusi_Panganggo:Bennylin">Berikan masukan!</a></small></p>
+        <textarea id="inp_txt" class="tb"></textarea><!--
+        <table width="100%" style="font-family:Arial"><tr><td style="width:50%">
+          <input type="radio" name="mode" value="ketik" checked="checked">Mode Ketik: 'e' = taling, 'x' = pepet <abbr title="Dalam mode ini, Anda bisa mengetik secara normal. Tombol 'e' digunakan untuk menuliskan taling, sementara tombol 'x' digunakan untuk menuliskan pepet"><small>[?]</small></abbr><br>
+          <input type="radio" name="mode" value="kopas">Mode Kopas: 'e' = pepet, 'è'/'é'  = taling <abbr title="Dalam mode ini, Anda bisa kopipas dari artikel yang menggunakan huruf 'e' beraksen (è/é), misalnya dari artikel Wikipedia bahasa Jawa"><small>[?]</small></abbr>
+        </td><td style="width:25%">
+          <input type="radio" name="murda" value="pakai">Mode Murda<br>
+          <input type="radio" name="murda" value="tidak" checked="checked">Mode <s>Murda</s>
+        </td><td style="width:25%">
+          <input type="radio" name="spasi" value="without">Tanpa spasi <abbr title="Dalam mode ini, teks akan diperlakukan tanpa ada spasi sama sekali, meskipun Anda menggunakan spasi. Teks tidak dapat dikonvert kembali dengan spasi."><small>[?]</small></abbr><br>
+          <input type="radio" name="spasi" value="with" checked="checked">Dengan spasi <abbr title="Dalam mode ini, setiap spasi diubah menjadi karakter khusus sehingga dapat ditransliterasi kembali ke Latin dengan spasi."><small>[?]</small></abbr>
+        </td></tr></table><!----><!--
+        <p style="font-family:Aksara Bali;">Karakter khusus: ḍ ḍh ṇ ṣ ṭ ṭh ꧁ ꧂ ꧃ ꧄ ꧅ ꧆ ꧊ ꧏ<br></p><!---->
+      </div>
+      <div id="output" class="gb">
+        <h3>You can compose text here, for transliteration type in textbox above.</h3>
+        <form name="formText">
+           <input type="reset" value="reset" />
+         <textarea id="ta" class="main_ta" name="editSrc"></textarea>
+           <input onclick="transliterate(java2latn)" name="buttonConvert" type="button" value="jawa &gt; latin" />
+        </form>
+      </div>
+
+   <div class="section">
+    <div class="grid7 firstcol"><!--
+     <h1>Menampilkan Aksara Jawa</h1>
+
+     <p>Situs "Nulisa" menampilkan aksara Jawa menggunakan font <a href="https://sites.google.com/site/jawaunicode/">Tuladha Jejeg</a>. Jika Anda belum memiliki font ini, tampilan aksara Jawa di situs ini mungkin tidak akan tertampil dengan benar. Untuk dapat menampilkan dengan benar, Anda memerlukan tiga "F": Font, Firefox, dan Fitur Graphite:</p>
+
+     <h2>1. Font</h2>
+     <p>(Khusus untuk situs ini) Anda tidak perlu mengunduh font apa pun untuk dapat membaca aksara Jawa di situs ini. Oleh sebab itu, Anda dapat menggunakan komputer mana pun (meskipun komputer tersebut tidak memiliki font aksara Jawa), dan aksara Jawa sudah akan tertampil. Jika Anda menggunakannya untuk keperluan selain situs ini, unduh (download) font Tuladha Jejeg di situs https://sites.google.com/site/jawaunicode/unduh, lalu pasang (install) font tersebut seperti memasang font biasa.
+</p>
+
+     <h2>2. Firefox</h2>
+     <p>Anda perlu menggunakan peramban web (browser) <a href="http://getfirefox.com/">Firefox</a> atau yang semacamnya, misalnya <a href="http://palemoon.org/">Palemoon</a>. Pastikan Anda menggunakan versi yang paling mutakhir (versi 11 ke atas). Karena alasan teknis, peramban Chrome, Internet Explorer (IE), Opera, Safari, dan peramban lain selain Firefox tidak dapat menampilkan aksara Jawa dengan benar. Kami mohon maaf atas ketidaknyamanan ini.
+</p>
+
+     <h2>3. (PENTING) Fitur graphite</h2>
+     <p>Nyalakan Graphite rendering di Firefox Anda. Tanpa fitur ini, tampilan aksara Jawanya akan kacau. Ikuti langkah-langkah berikut<a href="https://sites.google.com/site/jawaunicode/home/firefox_graphite"><sup>1</sup></a>
+<ol style="padding-left:40px;">
+<li>Ketik about:config di address bar. Tekan [Enter].
+</li><li>Selanjutnya muncul halaman peringatan bahwa kesalahan mengganti setting di halaman berikutnya bisa mengganggu stabilitas, keamanan, dan performa Firefox. Tekan tombol "<b>I'll be careful, I promise!</b>"
+</li><li>Di halaman berikutnya, di kolom <b>Preference Name</b>, carilah <span style="font-family:monospace">gfx.font_rendering.graphite.enabled</span>. Anda juga bisa memanfaatkan Search untuk membantu menemukannya dengan cara mengetikkan kata "graphite" di kotak Search.
+</li><li>Klik ganda <span style="font-family:monospace">gfx.font_rendering.graphite.enabled</span> untuk mengganti value-nya dari false menjadi true. Teks di barisnya akan menjadi tebal. <u>Jangan mengganti setting-setting lain di halaman ini kecuali Anda tahu fungsi dan tujuannya.</u>
+</li><li>Tutup tab <span style="font-family:monospace">about:config</span>. Dukungan rendering fonta Graphite sudah menyala dan aktif.</a>
+</li></ol><!---->
+
+<h2>Tes</h2>
+<p>Jika Anda bisa melihat aksara Jawa di bawah ini, berarti tidak ada masalah</p>
+
+<p>Urutan Latin<br>
+<span style="font-family:Aksara Bali">ᬩ᭄
+ᬘ᭄
+ᬤ᭄
+ᬕ᭄
+ᬳ᭄
+ᬚ᭄
+ᬓ᭄
+ᬮ᭄
+ᬫ᭄
+ᬦ᭄
+ᬗ᭄
+ᬜ᭄
+ᬧ᭄
+ᬭ᭄
+ᬲ᭄
+ᬢ᭄
+ᬯ᭄
+ᬬ᭄<br></span>
+<span style="font-family:Aksara Bali">᭄ᬩ
+᭄ᬘ
+᭄ᬤ
+᭄ᬕ
+᭄ᬳ
+᭄ᬚ
+᭄ᬓ
+᭄ᬮ
+᭄ᬫ
+᭄ᬦ
+᭄ᬗ
+᭄ᬜ
+᭄ᬧ
+᭄ᬭ
+᭄ᬲ
+᭄ᬢ
+᭄ᬯ
+᭄ᬬ<br></span>
+b &nbsp;&nbsp;&nbsp;c &nbsp;&nbsp;&nbsp;d &nbsp;&nbsp;&nbsp;g &nbsp;&nbsp;&nbsp;h &nbsp;&nbsp;&nbsp;j &nbsp;&nbsp;&nbsp;k &nbsp;&nbsp;&nbsp;l &nbsp;&nbsp;&nbsp;m &nbsp;&nbsp;&nbsp;n &nbsp;&nbsp;&nbsp;ng &nbsp;&nbsp;&nbsp;ny &nbsp;&nbsp;&nbsp;p &nbsp;&nbsp;&nbsp;r &nbsp;&nbsp;&nbsp;s &nbsp;&nbsp;&nbsp;t &nbsp;&nbsp;&nbsp;w &nbsp;&nbsp;&nbsp;y</p>
+
+<p>Urutan Hanacaraka<br>
+<span style="font-family:Aksara Bali">ᬳ
+ᬦ
+ᬘ
+ᬭ
+ᬓ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ᬤ
+ᬢ
+ᬲ
+ᬯ
+ᬮ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ᬧ
+ᬚ
+ᬬ
+ᬜ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ᬫ
+ᬕ
+ᬩ
+ᬗ</span><br>
+<span style="font-family:Aksara Bali">᭄ᬳ
+᭄ᬦ
+᭄ᬘ
+᭄ᬭ
+᭄ᬓ&nbsp;&nbsp;
+᭄ᬤ
+᭄ᬢ
+᭄ᬲ
+᭄ᬯ
+᭄ᬮ&nbsp;&nbsp;
+᭄ᬧ
+᭄ᬚ
+᭄ᬬ
+᭄ᬜ&nbsp;&nbsp;
+᭄ᬫ
+᭄ᬕ
+᭄ᬩ
+᭄ᬗ</span><br>
+ha na ca ra ka &nbsp;&nbsp;&nbsp;da ta sa wa la &nbsp;&nbsp;&nbsp;pa dha ja ya nya &nbsp;&nbsp;&nbsp;ma ga ba tha nga</p>
+    </div>
+
+    <div class="grid5 sidebar">
+     <div class="box">
+      <h2>Apa Yang Baru?</h2>
+      <p>&nbsp;</p>
+      <p>2015-04:</p>
+      <p>* Transliterasi Aksara Bali v0.1 diluncurkan</p>
+     </div>
+    </div>
+   </div>
+
+
+      <!--<div class="fb-comments" data-href="http://bennylin.github.io/transliterasijawa/v1/" data-width="370" data-num-posts="10"></div>-->
+    </div>
+  </div>
+
+   <div id="about">
+
+    <div class="section">
+
+     <div class="grid12 firstcol">
+      <h1><a href="#"><h1>Balinese Transliterator</h1></a></h1>
+      <h2>Transliterasi Latin-Aksara Bali, Aksara Bali-Latin</h2>
+
+      <p class="byline">By <a href="http://en.wikipedia.org/wiki/User:Bennylin">Bennylin</a></p>
+     </div>
+    </div>
+    <div class="section">
+     <div class="grid8 firstcol">
+     <h3>Tentang situs ini</h3>
+      <p>"Nulisa Aksara Bali" adalah sebuah proyek untuk mempermudah penulisan Aksara Bali. Selain itu "Nulisa" juga berfungsi untuk mentransliterasi teks dari Latin->Aksara serta sebaliknya. Proyek ini dimulai pada 2012 (Aksara Jawa), dan transliterasi Aksara Jawa ini dimulai sekitar 6 April 2015.</p>
+
+     <h3>Tentang penulis</h3>
+      <p>Saya adalah seorang Wikipediawan dan Wiktionarian bahasa Indonesia, bahasa Jawa, dan masih banyak lagi. Cita-cita saya adalah melihat aksara Jawa dan aksara Nusantara lainnya digunakan secara luas oleh masyarakat.</p>
+
+     </div>
+
+     <div class="grid4 sidebar">
+
+      <div class="box reverse">
+       <p class="last">Questions can be addressed to: <a href="http://github.com/bennylin">my github page</a>.</p>
+      </div>
+
+      <p class="caption">Atau tinggalkan pesan di Facebook Comment.</p>
+
+     </div>
+    </div>
+
+   </div>
+
+  <div id="unicode">
+   <div class="section">
+    <div class="grid12 firstcol">
+
+    <h1>Glyph Chart</h1>
+    <p>Blok Unicode aksara Jawa terletak pada kode U+1B00–U+1B7F. Sel abu-abu menunjukkan titik kode yang belum terpakai.</p>
+    <div id="glyph_chart" style="font-family:Aksara Bali">
+
+<div><p>&amp;#x1B00;<br></p>&#x1B00;</div><!-- title="U+1B00: BALINESE SIGN ULU RICEM" -->
+<div><p>&amp;#x1B01;<br></p>&#x1B01;</div><!-- title="U+1B01: BALINESE SIGN ULU CANDRA" -->
+<div><p>&amp;#x1B02;<br></p>&#x1B02;</div><!-- title="U+1B02: BALINESE SIGN CECEK" -->
+<div><p>&amp;#x1B03;<br></p>&#x1B03;</div><!-- title="U+1B03: BALINESE SIGN SURANG" -->
+<div><p>&amp;#x1B04;<br></p>&#x1B04;</div><!-- title="U+1B04: BALINESE SIGN BISAH" -->
+<div><p>&amp;#x1B05;<br></p>&#x1B05;</div><!-- title="U+1B05: BALINESE LETTER AKARA" -->
+<div><p>&amp;#x1B06;<br></p>&#x1B06;</div><!-- title="U+1B06: BALINESE LETTER AKARA TEDUNG" -->
+<div><p>&amp;#x1B07;<br></p>&#x1B07;</div><!-- title="U+1B07: BALINESE LETTER IKARA" -->
+<div><p>&amp;#x1B08;<br></p>&#x1B08;</div><!-- title="U+1B08: BALINESE LETTER IKARA TEDUNG" -->
+<div><p>&amp;#x1B09;<br></p>&#x1B09;</div><!-- title="U+1B09: BALINESE LETTER UKARA" -->
+<div><p>&amp;#x1B0A;<br></p>&#x1B0A;</div><!-- title="U+1B0A: BALINESE LETTER UKARA TEDUNG" -->
+<div><p>&amp;#x1B0B;<br></p>&#x1B0B;</div><!-- title="U+1B0B: BALINESE LETTER RA REPA" -->
+<div><p>&amp;#x1B0C;<br></p>&#x1B0C;</div><!-- title="U+1B0C: BALINESE LETTER RA REPA TEDUNG" -->
+<div><p>&amp;#x1B0D;<br></p>&#x1B0D;</div><!-- title="U+1B0D: BALINESE LETTER LA LENGA" -->
+<div><p>&amp;#x1B0E;<br></p>&#x1B0E;</div><!-- title="U+1B0E: BALINESE LETTER LA LENGA TEDUNG" -->
+<div><p>&amp;#x1B0F;<br></p>&#x1B0F;</div><!-- title="U+1B0F: BALINESE LETTER EKARA" -->
+<div><p>&amp;#x1B10;<br></p>&#x1B10;</div><!-- title="U+1B10: BALINESE LETTER AIKARA" -->
+<div><p>&amp;#x1B11;<br></p>&#x1B11;</div><!-- title="U+1B11: BALINESE LETTER OKARA" -->
+<div><p>&amp;#x1B12;<br></p>&#x1B12;</div><!-- title="U+1B12: BALINESE LETTER OKARA TEDUNG" -->
+<div><p>&amp;#x1B13;<br></p>&#x1B13;</div><!-- title="U+1B13: BALINESE LETTER KA" -->
+<div><p>&amp;#x1B14;<br></p>&#x1B14;</div><!-- title="U+1B14: BALINESE LETTER KA MAHAPRANA" -->
+<div><p>&amp;#x1B15;<br></p>&#x1B15;</div><!-- title="U+1B15: BALINESE LETTER GA" -->
+<div><p>&amp;#x1B16;<br></p>&#x1B16;</div><!-- title="U+1B16: BALINESE LETTER GA GORA" -->
+<div><p>&amp;#x1B17;<br></p>&#x1B17;</div><!-- title="U+1B17: BALINESE LETTER NGA" -->
+<div><p>&amp;#x1B18;<br></p>&#x1B18;</div><!-- title="U+1B18: BALINESE LETTER CA" -->
+<div><p>&amp;#x1B19;<br></p>&#x1B19;</div><!-- title="U+1B19: BALINESE LETTER CA LACA" -->
+<div><p>&amp;#x1B1A;<br></p>&#x1B1A;</div><!-- title="U+1B1A: BALINESE LETTER JA" -->
+<div><p>&amp;#x1B1B;<br></p>&#x1B1B;</div><!-- title="U+1B1B: BALINESE LETTER JA JERA" -->
+<div><p>&amp;#x1B1C;<br></p>&#x1B1C;</div><!-- title="U+1B1C: BALINESE LETTER NYA" -->
+<div><p>&amp;#x1B1D;<br></p>&#x1B1D;</div><!-- title="U+1B1D: BALINESE LETTER TA LATIK" -->
+<div><p>&amp;#x1B1E;<br></p>&#x1B1E;</div><!-- title="U+1B1E: BALINESE LETTER TA MURDA MAHAPRANA" -->
+<div><p>&amp;#x1B1F;<br></p>&#x1B1F;</div><!-- title="U+1B1F: BALINESE LETTER DA MURDA ALPAPRANA" -->
+<div><p>&amp;#x1B20;<br></p>&#x1B20;</div><!-- title="U+1B20: BALINESE LETTER DA MURDA MAHAPRANA" -->
+<div><p>&amp;#x1B21;<br></p>&#x1B21;</div><!-- title="U+1B21: BALINESE LETTER NA RAMBAT" -->
+<div><p>&amp;#x1B22;<br></p>&#x1B22;</div><!-- title="U+1B22: BALINESE LETTER TA" -->
+<div><p>&amp;#x1B23;<br></p>&#x1B23;</div><!-- title="U+1B23: BALINESE LETTER TA TAWA" -->
+<div><p>&amp;#x1B24;<br></p>&#x1B24;</div><!-- title="U+1B24: BALINESE LETTER DA" -->
+<div><p>&amp;#x1B25;<br></p>&#x1B25;</div><!-- title="U+1B25: BALINESE LETTER DA MADU" -->
+<div><p>&amp;#x1B26;<br></p>&#x1B26;</div><!-- title="U+1B26: BALINESE LETTER NA" -->
+<div><p>&amp;#x1B27;<br></p>&#x1B27;</div><!-- title="U+1B27: BALINESE LETTER PA" -->
+<div><p>&amp;#x1B28;<br></p>&#x1B28;</div><!-- title="U+1B28: BALINESE LETTER PA KAPAL" -->
+<div><p>&amp;#x1B29;<br></p>&#x1B29;</div><!-- title="U+1B29: BALINESE LETTER BA" -->
+<div><p>&amp;#x1B2A;<br></p>&#x1B2A;</div><!-- title="U+1B2A: BALINESE LETTER BA KEMBANG" -->
+<div><p>&amp;#x1B2B;<br></p>&#x1B2B;</div><!-- title="U+1B2B: BALINESE LETTER MA" -->
+<div><p>&amp;#x1B2C;<br></p>&#x1B2C;</div><!-- title="U+1B2C: BALINESE LETTER YA" -->
+<div><p>&amp;#x1B2D;<br></p>&#x1B2D;</div><!-- title="U+1B2D: BALINESE LETTER RA" -->
+<div><p>&amp;#x1B2E;<br></p>&#x1B2E;</div><!-- title="U+1B2E: BALINESE LETTER LA" -->
+<div><p>&amp;#x1B2F;<br></p>&#x1B2F;</div><!-- title="U+1B2F: BALINESE LETTER WA" -->
+<div><p>&amp;#x1B30;<br></p>&#x1B30;</div><!-- title="U+1B30: BALINESE LETTER SA SAGA" -->
+<div><p>&amp;#x1B31;<br></p>&#x1B31;</div><!-- title="U+1B31: BALINESE LETTER SA SAPA" -->
+<div><p>&amp;#x1B32;<br></p>&#x1B32;</div><!-- title="U+1B32: BALINESE LETTER SA" -->
+<div><p>&amp;#x1B33;<br></p>&#x1B33;</div><!-- title="U+1B33: BALINESE LETTER HA" -->
+<div><p>&amp;#x1B34;<br></p>&#x1B34;</div><!-- title="U+1B34: BALINESE SIGN REREKAN" -->
+<div><p>&amp;#x1B35;<br></p>&#x1B35;</div><!-- title="U+1B35: BALINESE VOWEL SIGN TEDUNG" -->
+<div><p>&amp;#x1B36;<br></p>&#x1B36;</div><!-- title="U+1B36: BALINESE VOWEL SIGN ULU" -->
+<div><p>&amp;#x1B37;<br></p>&#x1B37;</div><!-- title="U+1B37: BALINESE VOWEL SIGN ULU SARI" -->
+<div><p>&amp;#x1B38;<br></p>&#x1B38;</div><!-- title="U+1B38: BALINESE VOWEL SIGN SUKU" -->
+<div><p>&amp;#x1B39;<br></p>&#x1B39;</div><!-- title="U+1B39: BALINESE VOWEL SIGN SUKU ILUT" -->
+<div><p>&amp;#x1B3A;<br></p>&#x1B3A;</div><!-- title="U+1B3A: BALINESE VOWEL SIGN RA REPA" -->
+<div><p>&amp;#x1B3B;<br></p>&#x1B3B;</div><!-- title="U+1B3B: BALINESE VOWEL SIGN RA REPA TEDUNG" -->
+<div><p>&amp;#x1B3C;<br></p>&#x1B3C;</div><!-- title="U+1B3C: BALINESE VOWEL SIGN LA LENGA" -->
+<div><p>&amp;#x1B3D;<br></p>&#x1B3D;</div><!-- title="U+1B3D: BALINESE VOWEL SIGN LA LENGA TEDUNG" -->
+<div><p>&amp;#x1B3E;<br></p>&#x1B3E;</div><!-- title="U+1B3E: BALINESE VOWEL SIGN TALING" -->
+<div><p>&amp;#x1B3F;<br></p>&#x1B3F;</div><!-- title="U+1B3F: BALINESE VOWEL SIGN TALING REPA" -->
+<div><p>&amp;#x1B40;<br></p>&#x1B40;</div><!-- title="U+1B40: BALINESE VOWEL SIGN TALING TEDUNG" -->
+<div><p>&amp;#x1B41;<br></p>&#x1B41;</div><!-- title="U+1B41: BALINESE VOWEL SIGN TALING REPA TEDUNG" -->
+<div><p>&amp;#x1B42;<br></p>&#x1B42;</div><!-- title="U+1B42: BALINESE VOWEL SIGN PEPET" -->
+<div><p>&amp;#x1B43;<br></p>&#x1B43;</div><!-- title="U+1B43: BALINESE VOWEL SIGN PEPET TEDUNG" -->
+<div><p>&amp;#x1B44;<br></p>&#x1B44;</div><!-- title="U+1B44: BALINESE ADEG ADEG" -->
+<div><p>&amp;#x1B45;<br></p>&#x1B45;</div><!-- title="U+1B45: BALINESE LETTER KAF SASAK" -->
+<div><p>&amp;#x1B46;<br></p>&#x1B46;</div><!-- title="U+1B46: BALINESE LETTER KHOT SASAK" -->
+<div><p>&amp;#x1B47;<br></p>&#x1B47;</div><!-- title="U+1B47: BALINESE LETTER TZIR SASAK" -->
+<div><p>&amp;#x1B48;<br></p>&#x1B48;</div><!-- title="U+1B48: BALINESE LETTER EF SASAK" -->
+<div><p>&amp;#x1B49;<br></p>&#x1B49;</div><!-- title="U+1B49: BALINESE LETTER VE SASAK" -->
+<div><p>&amp;#x1B4A;<br></p>&#x1B4A;</div><!-- title="U+1B4A: BALINESE LETTER ZAL SASAK" -->
+<div><p>&amp;#x1B4B;<br></p>&#x1B4B;</div><!-- title="U+1B4B: BALINESE LETTER ASYURA SASAK" -->
+<div><p>&amp;#x1B4C;<br></p>&#x1B4B;</div><!-- Reserved -->
+<div><p>&amp;#x1B4D;<br></p>&#x1B4B;</div><!-- Reserved -->
+<div><p>&amp;#x1B4E;<br></p>&#x1B4B;</div><!-- Reserved -->
+<div><p>&amp;#x1B4F;<br></p>&#x1B4B;</div><!-- Reserved -->
+<div><p>&amp;#x1B50;<br></p>&#x1B50;</div><!-- title="U+1B50: BALINESE DIGIT ZERO" -->
+<div><p>&amp;#x1B51;<br></p>&#x1B51;</div><!-- title="U+1B51: BALINESE DIGIT ONE" -->
+<div><p>&amp;#x1B52;<br></p>&#x1B52;</div><!-- title="U+1B52: BALINESE DIGIT TWO" -->
+<div><p>&amp;#x1B53;<br></p>&#x1B53;</div><!-- title="U+1B53: BALINESE DIGIT THREE" -->
+<div><p>&amp;#x1B54;<br></p>&#x1B54;</div><!-- title="U+1B54: BALINESE DIGIT FOUR" -->
+<div><p>&amp;#x1B55;<br></p>&#x1B55;</div><!-- title="U+1B55: BALINESE DIGIT FIVE" -->
+<div><p>&amp;#x1B56;<br></p>&#x1B56;</div><!-- title="U+1B56: BALINESE DIGIT SIX" -->
+<div><p>&amp;#x1B57;<br></p>&#x1B57;</div><!-- title="U+1B57: BALINESE DIGIT SEVEN" -->
+<div><p>&amp;#x1B58;<br></p>&#x1B58;</div><!-- title="U+1B58: BALINESE DIGIT EIGHT" -->
+<div><p>&amp;#x1B59;<br></p>&#x1B59;</div><!-- title="U+1B59: BALINESE DIGIT NINE" -->
+<div><p>&amp;#x1B5A;<br></p>&#x1B5A;</div><!-- title="U+1B5A: BALINESE PANTI" -->
+<div><p>&amp;#x1B5B;<br></p>&#x1B5B;</div><!-- title="U+1B5B: BALINESE PAMADA" -->
+<div><p>&amp;#x1B5C;<br></p>&#x1B5C;</div><!-- title="U+1B5C: BALINESE WINDU" -->
+<div><p>&amp;#x1B5D;<br></p>&#x1B5D;</div><!-- title="U+1B5D: BALINESE CARIK PAMUNGKAH" -->
+<div><p>&amp;#x1B5E;<br></p>&#x1B5E;</div><!-- title="U+1B5E: BALINESE CARIK SIKI" -->
+<div><p>&amp;#x1B5F;<br></p>&#x1B5F;</div><!-- title="U+1B5F: BALINESE CARIK PAREREN" -->
+<div><p>&amp;#x1B60;<br></p>&#x1B60;</div><!-- title="U+1B60: BALINESE PAMENENG" -->
+<div><p>&amp;#x1B61;<br></p>&#x1B61;</div><!-- title="U+1B61: BALINESE MUSICAL SYMBOL DONG" -->
+<div><p>&amp;#x1B62;<br></p>&#x1B62;</div><!-- title="U+1B62: BALINESE MUSICAL SYMBOL DENG" -->
+<div><p>&amp;#x1B63;<br></p>&#x1B63;</div><!-- title="U+1B63: BALINESE MUSICAL SYMBOL DUNG" -->
+<div><p>&amp;#x1B64;<br></p>&#x1B64;</div><!-- title="U+1B64: BALINESE MUSICAL SYMBOL DANG" -->
+<div><p>&amp;#x1B65;<br></p>&#x1B65;</div><!-- title="U+1B65: BALINESE MUSICAL SYMBOL DANG SURANG" -->
+<div><p>&amp;#x1B66;<br></p>&#x1B66;</div><!-- title="U+1B66: BALINESE MUSICAL SYMBOL DING" -->
+<div><p>&amp;#x1B67;<br></p>&#x1B67;</div><!-- title="U+1B67: BALINESE MUSICAL SYMBOL DAENG" -->
+<div><p>&amp;#x1B68;<br></p>&#x1B68;</div><!-- title="U+1B68: BALINESE MUSICAL SYMBOL DEUNG" -->
+<div><p>&amp;#x1B69;<br></p>&#x1B69;</div><!-- title="U+1B69: BALINESE MUSICAL SYMBOL DAING" -->
+<div><p>&amp;#x1B6A;<br></p>&#x1B6A;</div><!-- title="U+1B6A: BALINESE MUSICAL SYMBOL DANG GEDE" -->
+<div><p>&amp;#x1B6B;<br></p>&#x1B6B;</div><!-- title="U+1B6B: BALINESE MUSICAL SYMBOL COMBINING TEGEH" -->
+<div><p>&amp;#x1B6C;<br></p>&#x1B6C;</div><!-- title="U+1B6C: BALINESE MUSICAL SYMBOL COMBINING ENDEP" -->
+<div><p>&amp;#x1B6D;<br></p>&#x1B6D;</div><!-- title="U+1B6D: BALINESE MUSICAL SYMBOL COMBINING KEMPUL" -->
+<div><p>&amp;#x1B6E;<br></p>&#x1B6E;</div><!-- title="U+1B6E: BALINESE MUSICAL SYMBOL COMBINING KEMPLI" -->
+<div><p>&amp;#x1B6F;<br></p>&#x1B6F;</div><!-- title="U+1B6F: BALINESE MUSICAL SYMBOL COMBINING JEGOGAN" -->
+<div><p>&amp;#x1B70;<br></p>&#x1B70;</div><!-- title="U+1B70: BALINESE MUSICAL SYMBOL COMBINING KEMPUL WITH JEGOGAN" -->
+<div><p>&amp;#x1B71;<br></p>&#x1B71;</div><!-- title="U+1B71: BALINESE MUSICAL SYMBOL COMBINING KEMPLI WITH JEGOGAN" -->
+<div><p>&amp;#x1B72;<br></p>&#x1B72;</div><!-- title="U+1B72: BALINESE MUSICAL SYMBOL COMBINING BENDE" -->
+<div><p>&amp;#x1B73;<br></p>&#x1B73;</div><!-- title="U+1B73: BALINESE MUSICAL SYMBOL COMBINING GONG" -->
+<div><p>&amp;#x1B74;<br></p>&#x1B74;</div><!-- title="U+1B74: BALINESE MUSICAL SYMBOL RIGHT-HAND OPEN DUG" -->
+<div><p>&amp;#x1B75;<br></p>&#x1B75;</div><!-- title="U+1B75: BALINESE MUSICAL SYMBOL RIGHT-HAND OPEN DAG" -->
+<div><p>&amp;#x1B76;<br></p>&#x1B76;</div><!-- title="U+1B76: BALINESE MUSICAL SYMBOL RIGHT-HAND CLOSED TUK" -->
+<div><p>&amp;#x1B77;<br></p>&#x1B77;</div><!-- title="U+1B77: BALINESE MUSICAL SYMBOL RIGHT-HAND CLOSED TAK" -->
+<div><p>&amp;#x1B78;<br></p>&#x1B78;</div><!-- title="U+1B78: BALINESE MUSICAL SYMBOL LEFT-HAND OPEN PANG" -->
+<div><p>&amp;#x1B79;<br></p>&#x1B79;</div><!-- title="U+1B79: BALINESE MUSICAL SYMBOL LEFT-HAND OPEN PUNG" -->
+<div><p>&amp;#x1B7A;<br></p>&#x1B7A;</div><!-- title="U+1B7A: BALINESE MUSICAL SYMBOL LEFT-HAND CLOSED PLAK" -->
+<div><p>&amp;#x1B7B;<br></p>&#x1B7B;</div><!-- title="U+1B7B: BALINESE MUSICAL SYMBOL LEFT-HAND CLOSED PLUK" -->
+<div><p>&amp;#x1B7C;<br></p>&#x1B7C;</div><!-- title="U+1B7C: BALINESE MUSICAL SYMBOL LEFT-HAND OPEN PING" -->
+<div><p>&amp;#x1B7D;<br></p>&#x1B4B;</div><!-- Reserved -->
+<div><p>&amp;#x1B7E;<br></p>&#x1B4B;</div><!-- Reserved -->
+<div><p>&amp;#x1B7F;<br></p>&#x1B4B;</div><!-- Reserved -->
+
+    </div>
+    </div>
+
+   </div>
+  </div>
+
+  <div id="specs">
+
+  </div>
+
+  <div id="faq">
+   <div class="section">
+    <div class="grid7 firstcol">
+     <h1>Menampilkan Aksara Bali</h1>
+
+     <p>Situs "Nulisa Aksara Bali" ini menampilkan aksara Jawa menggunakan font <a href="http://www.alanwood.net/downloads/index.html">Aksara Bali</a>. Jika Anda belum memiliki font ini, tampilan aksara Bali di situs ini mungkin tidak akan tertampil dengan benar.</p>
+
+
+<h2>Tes</h2>
+<p>Jika Anda bisa melihat aksara Jawa di bawah ini, berarti tidak ada masalah</p>
+
+
+<p>Urutan Latin<br>
+<span style="font-family:Aksara Bali">ᬩ᭄
+ᬘ᭄
+ᬤ᭄
+ᬕ᭄
+ᬳ᭄
+ᬚ᭄
+ᬓ᭄
+ᬮ᭄
+ᬫ᭄
+ᬦ᭄
+ᬗ᭄
+ᬜ᭄
+ᬧ᭄
+ᬭ᭄
+ᬲ᭄
+ᬢ᭄
+ᬯ᭄
+ᬬ᭄<br></span>
+<span style="font-family:Aksara Bali">᭄ᬩ
+᭄ᬘ
+᭄ᬤ
+᭄ᬕ
+᭄ᬳ
+᭄ᬚ
+᭄ᬓ
+᭄ᬮ
+᭄ᬫ
+᭄ᬦ
+᭄ᬗ
+᭄ᬜ
+᭄ᬧ
+᭄ᬭ
+᭄ᬲ
+᭄ᬢ
+᭄ᬯ
+᭄ᬬ<br></span>
+b &nbsp;&nbsp;&nbsp;c &nbsp;&nbsp;&nbsp;d &nbsp;&nbsp;&nbsp;g &nbsp;&nbsp;&nbsp;h &nbsp;&nbsp;&nbsp;j &nbsp;&nbsp;&nbsp;k &nbsp;&nbsp;&nbsp;l &nbsp;&nbsp;&nbsp;m &nbsp;&nbsp;&nbsp;n &nbsp;&nbsp;&nbsp;ng &nbsp;&nbsp;&nbsp;ny &nbsp;&nbsp;&nbsp;p &nbsp;&nbsp;&nbsp;r &nbsp;&nbsp;&nbsp;s &nbsp;&nbsp;&nbsp;t &nbsp;&nbsp;&nbsp;w &nbsp;&nbsp;&nbsp;y</p>
+
+<p>Urutan Hanacaraka<br>
+<span style="font-family:Aksara Bali">ᬳ
+ᬦ
+ᬘ
+ᬭ
+ᬓ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ᬤ
+ᬢ
+ᬲ
+ᬯ
+ᬮ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ᬧ
+ᬚ
+ᬬ
+ᬜ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ᬫ
+ᬕ
+ᬩ
+ᬗ</span><br>
+<span style="font-family:Aksara Bali">᭄ᬳ
+᭄ᬦ
+᭄ᬘ
+᭄ᬭ
+᭄ᬓ&nbsp;&nbsp;
+᭄ᬤ
+᭄ᬢ
+᭄ᬲ
+᭄ᬯ
+᭄ᬮ&nbsp;&nbsp;
+᭄ᬧ
+᭄ᬚ
+᭄ᬬ
+᭄ᬜ&nbsp;&nbsp;
+᭄ᬫ
+᭄ᬕ
+᭄ᬩ
+᭄ᬗ</span><br>
+ha na ca ra ka &nbsp;&nbsp;&nbsp;da ta sa wa la &nbsp;&nbsp;&nbsp;pa dha ja ya nya &nbsp;&nbsp;&nbsp;ma ga ba tha nga</p>
+    </div>
+
+    <div class="grid5 sidebar">
+     <div class="box">
+     </div>
+    </div>
+   </div>
+
+  </div>
+
+  <div id="resources">
+      <h2>Download</h2>
+      <p>Untuk download, Anda cukup menyimpan halaman ini (Ctrl-S) di komputer Anda, dan Anda dapat membukanya kembali di browser Anda untuk dapat langsung menulis Aksara Jawa.<!--<a href="https://github.com/bennylin/transliterasijawa/zipball/master">Download <strong>ZIP File</strong></a>--><br>Atau, Anda bisa download dari Dropbox dengan mengeklik di <a href="https://www.dropbox.com/s/z7r74yw0i1zcq4h/Nulisa_v1.1.zip">sini</a></p>
+  </div>
+
+<div class="fb-comments" data-href="http://bennylin.github.io/transliterasijawa/v1/" data-numposts="5" data-colorscheme="light"></div>
+
+ </div>
+ <div id="footer">
+  <p>&copy;<a href="lama.html">08-2015</a> v1.2 | <a href="http://facebook.com/bennylin.solo">Facebook</a> | <a href="http://twitter.com/bennylin">Twitter</a> | <a href="http://github.com/bennylin">Github</a></p>
+ </div>
+</div>
+</body>
+</html>
