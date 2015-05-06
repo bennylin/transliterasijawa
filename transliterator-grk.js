@@ -116,6 +116,58 @@ var unicode2olbgrk = {
 "Ζ":"Z"
 }
 
+var greek2latin = {"","","",","","","X","",""
+"α":"a",
+"Α":"A",
+"β":"b",
+"Β":"B",
+"χ":"ch",
+"Χ":"CH",
+"δ":"d",
+"Δ":"D",
+"ε":"e",
+"Ε":"E",
+"φ":"f",
+"Φ":"F",
+"γ":"g",
+"Γ":"G",
+"η":"ē",
+"Η":"Ē",
+"ι":"i",
+"Ι":"I",
+"κ":"k",
+"Κ":"K",
+"λ":"l",
+"Λ":"L",
+"μ":"m",
+"Μ":"M",
+"ν":"n",
+"Ν":"N",
+"ο":"o",
+"Ο":"O",
+"π":"p",
+"Π":"P",
+"ψ":"ps",
+"Ψ":"PS",
+"ρ":"r",
+"Ρ":"R",
+"σ":"s",
+"Σ":"S",
+"τ":"t",
+"Τ":"T",
+"υ":"u",
+"Υ":"U",
+"ς":"s̱",
+"ω":"ō",
+"Ω":"Ō",
+"ξ":"x",
+"Ξ":"X",
+"θ":"th",
+"Θ":"TH",
+"ζ":"z",
+"Ζ":"Z"
+}
+
 var olbheb2unicode  = {
 "a":"א",
 "b":"ב",
@@ -258,6 +310,8 @@ function transliterate(regexp_file) {
       if (regexp_file[str[i]] && regexp_file["a"] == "α") { //olbgrk->unicode
         trans = trans.ganti(j, regexp_file[str[i]]);j++;
       } else if (regexp_file[str[i]] && regexp_file["α"] == "a") { //unicode->olbgrk
+        trans = trans.ganti(j, regexp_file[str[i]]);j++;
+      } else if (regexp_file[str[i]] && regexp_file["χ"] == "ch") { //greek->latin
         trans = trans.ganti(j, regexp_file[str[i]]);j++;
       } else if (regexp_file[str[i]] && regexp_file["a"] == "א") { //olbheb->unicode
         trans = trans.ganti(j, regexp_file[str[i]]);j++;
