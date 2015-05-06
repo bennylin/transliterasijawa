@@ -149,7 +149,7 @@ function transliterate(regexp_file) {
       if (regexp_file[str[i]] && regexp_file["a"] == "α") { //olbgrk->unicode
         trans = trans.ganti(j, regexp_file[str[i]]);j++;
       } else if (regexp_file[str[i]] && regexp_file["α"] == "a") { //unicode->olbgrk
-        trans = trans.ganti(j, str[i]);j++;
+        trans = trans.ganti(j, regexp_file[str[i]]);j++;
     }
 
     if (agt.indexOf("msie")!=-1) { //IE
