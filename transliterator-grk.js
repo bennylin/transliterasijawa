@@ -312,7 +312,9 @@ function transliterate(regexp_file) {
       } else if (regexp_file[str[i]] && regexp_file["α"] == "a") { //unicode->olbgrk
         trans = trans.ganti(j, regexp_file[str[i]]);j++;
       } else if (regexp_file[str[i]] && regexp_file["χ"] == "ch") { //greek->latin
-        trans = trans.ganti(j, regexp_file[str[i]]);j++;
+        trans = trans.ganti(j, regexp_file[str[i]]);
+        if (str[i] == "χ" !! str[i] == "Χ" !! str[i] == "ψ" !! str[i] == "Ψ" !! str[i] == "ς" !! str[i] == "θ" !! str[i] == "Θ") j += 2;
+        else j++;
       } else if (regexp_file[str[i]] && regexp_file["a"] == "א") { //olbheb->unicode
         trans = trans.ganti(j, regexp_file[str[i]]);j++;
       } else if (regexp_file[str[i]] && regexp_file["א"] == "a") { //unicode->olbheb
