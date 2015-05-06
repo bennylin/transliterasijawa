@@ -116,7 +116,7 @@ var unicode2olbgrk = {
 "Ζ":"Z"
 }
 
-var greek2latin = {"","","",","","","X","",""
+var greek2latin = {
 "α":"a",
 "Α":"A",
 "β":"b",
