@@ -13,6 +13,7 @@
 */
 
 var olbgrk2unicode  = {
+"#":"1",
 "a":"α",
 "A":"Α",
 "b":"β",
@@ -65,6 +66,7 @@ var olbgrk2unicode  = {
 }
 
 var unicode2olbgrk = {
+"#":"2",
 "α":"a",
 "Α":"A",
 "β":"b",
@@ -117,6 +119,7 @@ var unicode2olbgrk = {
 }
 
 var greek2latin = {
+"#":"3",
 "α":"a",
 "Α":"A",
 "β":"b",
@@ -168,122 +171,149 @@ var greek2latin = {
 "Ζ":"Z"
 }
 
-var olbheb2unicode  = {
+var olbheb2unicode  = { //with addition from Society of Biblical Literature's transliteration
+"#":"4",
 "a":"א",
+"ʾ":"א",//addition
 "b":"ב",
 "d":"ד",
 "e":"ע",
+"ʿ":"ע",//addition
 "g":"ג",
 "h":"ח",
+"á":"ח",//my addition
 "j":"ט",
+"ț":"ט",//addition
 "k":"כ",
+"K":"ך",
 "l":"ל",
 "m":"מ",
+"M":"ם",
 "n":"נ",
+"N":"ן",
 "o":"ס",
 "p":"פ",
+"P":"ף",
 "q":"ק",
+"ḱ":"ק",//my addition
 "r":"ר",
-"s":"ש",
+"s":"שׁ",
+"š":"שׁ",//addition
+"S":"שׁ",//=s
 "t":"ת",
 "u":"צ",
-"v":"ש",
-"w":"ו",
-"x":"ח",
-"y":"י",
-"z":"ז",
-"K":"ך",
-"M":"ם",
-"N":"ן",
-"P":"ף",
-"S":"שׁ",
 "U":"ץ",
-"V":"שׂ"
-}
-
-var unicode2olbgrk = {
-"α":"a",
-"Α":"A",
-"β":"b",
-"Β":"B",
-"χ":"c",
-"Χ":"C",
-"δ":"d",
-"Δ":"D",
-"ε":"e",
-"Ε":"E",
-"φ":"f",
-"Φ":"F",
-"γ":"g",
-"Γ":"G",
-"η":"h",
-"Η":"H",
-"ι":"i",
-"Ι":"I",
-"κ":"k",
-"Κ":"K",
-"λ":"l",
-"Λ":"L",
-"μ":"m",
-"Μ":"M",
-"ν":"n",
-"Ν":"N",
-"ο":"o",
-"Ο":"O",
-"π":"p",
-"Π":"P",
-"ψ":"q",
-"Ψ":"Q",
-"ρ":"r",
-"Ρ":"R",
-"σ":"s",
-"Σ":"S",
-"τ":"t",
-"Τ":"T",
-"υ":"u",
-"Υ":"U",
-"ς":"v",
-"ω":"w",
-"Ω":"W",
-"ξ":"x",
-"Ξ":"X",
-"θ":"y",
-"Θ":"Y",
-"ζ":"z",
-"Ζ":"Z"
+"ṣ":"צ",//addition
+"v":"שׂ",
+"V":"שׂ",//=v
+"w":"ו",
+"ó":"ו",//my addition
+"x":"ח",//=h
+"ḥ":"ח",//addition
+"y":"י",
+"i":"י",//my addition
+"z":"ז",
+"ׂ":"",
+"ׁ":"",
+"̣":"",
+"̌":"",//caron (š)
+"́":"",//accute accent (ś)
+"_":""
 }
 
 var unicode2olbheb  = {
+"#":"5",
 "א" :"a",
 "ב" :"b",
 "ד" :"d",
 "ע" :"e",
 "ג" :"g",
 "ח" :"h",
-"ט" :"j",
+"ט" :"ț",//j corrected to ț
 "כ" :"k",
+"ך" :"K",
 "ל" :"l",
 "מ" :"m",
+"ם" :"M",
 "נ" :"n",
+"ן" :"N",
 "ס" :"o",
 "פ" :"p",
+"ף" :"P",
 "ק" :"q",
 "ר" :"r",
 "ש" :"s",
+"שׁ":"s",
 "ת" :"t",
 "צ" :"u",
-"ש" :"v",
-"ו" :"w",
-"ח" :"x",
-"י" :"y",
-"ז" :"z",
-"ך" :"K",
-"ם" :"M",
-"ן" :"N",
-"ף" :"P",
-"שׁ":"S",//still error
 "ץ" :"U",
-"שׂ":"V"//still error
+"שׂ":"v",
+"ו" :"w",
+"ח" :"h",//x = h
+"י" :"y",
+"ז" :"z"
+}
+
+var hebrew2latin  = {
+"#":"6",
+"א" :"ʾ",
+"ב" :"b",
+"ד" :"d",
+"ע" :"ʿ",
+"ג" :"g",
+"ח" :"h",
+"ט" :"ț",//ṭ (t with dot below) -> ț (t comma)
+"כ" :"k",
+"ך" :"k",
+"ל" :"l",
+"מ" :"m",
+"ם" :"m",
+"נ" :"n",
+"ן" :"n",
+"ס" :"s",
+"פ" :"p",
+"ף" :"p",
+"ק" :"q",
+"ר" :"r",
+"שׁ":"š",
+"שׂ":"ś",
+"ת" :"t",
+"צ" :"ṣ",
+"ץ" :"ṣ",
+"ו" :"w",
+"י" :"y",
+"ז" :"z"
+}
+
+var hebrew2latinAlt  = {
+"#":"7",
+"א" :"a",
+"ב" :"b_",
+"ד" :"d_",
+"ע" :"e",
+"ג" :"g_",
+"ח" :"á",//h->á
+"ט" :"ț_",
+"כ" :"k_",
+"ך" :"k_",
+"ל" :"l_",
+"מ" :"m_",
+"ם" :"m_",
+"נ" :"n_",
+"ן" :"n_",
+"ס" :"s_",
+"פ" :"p_",
+"ף" :"p_",
+"ק" :"ḱ_",//q->ḱ
+"ר" :"r_",
+"שׁ":"š",
+"שׂ":"ś",
+"ת" :"t_",
+"צ" :"ṣ",//ṣ->z
+"ץ" :"ṣ",//ṣ->z
+"ו" :"ó",//w->ó
+"י" :"i",//y->i
+"ז" :"z_"
 }
 
 String.prototype.ganti=function(index, character) {
@@ -307,18 +337,96 @@ function transliterate(regexp_file) {
 
     var trans = str;
     for (var i = 0, j = 0; i < str.length; i++) {
-      if (regexp_file[str[i]] && regexp_file["a"] == "α") { //olbgrk->unicode
+    	//olbgrk->unicode (I)
+      if (regexp_file[str[i]] && regexp_file["#"] == "1") {
         trans = trans.ganti(j, regexp_file[str[i]]);j++;
-      } else if (regexp_file[str[i]] && regexp_file["χ"] == "ch") { //greek->latin
+      }
+      //unicode->olbgrk (II)
+      else if (regexp_file[str[i]] && regexp_file["#"] == "2") {
+        trans = trans.ganti(j, regexp_file[str[i]]);j++;
+      }
+      //unicode greek->latin (III)
+      else if (regexp_file[str[i]] && regexp_file["#"] == "3") {
         trans = trans.ganti(j, regexp_file[str[i]]);
         if (str[i] == "χ" || str[i] == "Χ" || str[i] == "ψ" || str[i] == "Ψ" || str[i] == "ς" || str[i] == "θ" || str[i] == "Θ") j += 2;
         else j++;
-      } else if (regexp_file[str[i]] && regexp_file["χ"] == "c") { //unicode->olbgrk
+      }
+      //special olbheb->unicode (IV A)
+      else if ((str[i] == "̣" || str[i] == "̌" || str[i] == "́" || str[i] == "_") && regexp_file["#"] == "4") {
+        if (str[i] == "̣") {
+        	trans = trans.ganti(j-3, "צ");j-=2;
+        }
+        else if (str[i] == "̌") {
+        	trans = trans.ganti(j-3, "שׁ");j-=2;
+        }
+        else if (str[i] == "́" || str[i] == "_") {}
+        else {
+        	trans = trans.ganti(j, regexp_file[str[i]]);j++;
+        	if (str[i] == "s" || str[i] == "v" || str[i] == "S" || str[i] == "V") j += 2;
+        	else j++;
+        }
+      }
+      //normal olbheb->unicode (IV B)
+      else if (regexp_file[str[i]] && regexp_file["#"] == "4") {
         trans = trans.ganti(j, regexp_file[str[i]]);j++;
-      } else if (regexp_file[str[i]] && regexp_file["a"] == "א") { //olbheb->unicode
+        if (str[i] == "s" || str[i] == "v" || str[i] == "S" || str[i] == "V") j += 2;
+        else j++;
+      }
+      //special unicode->olbheb (V A)
+      else if ((str[i] == "ׂ" || str[i] == "ׁ" || str[i] == "̣" || str[i] == "̌" || str[i] == "́" || str[i] == "_") && regexp_file["#"] == "5") {
+        if (str[i] == "ׂ") {
+        	trans = trans.ganti(j-1, "v");j++;
+        }
+        else if (str[i] == "ׁ" || str[i] == "̣" || str[i] == "̌" || str[i] == "́" || str[i] == "_") {}
+        else {
+        	trans = trans.ganti(j, regexp_file[str[i]]);j++;
+        }
+      }
+      //normal unicode->olbheb (V B)
+      else if (regexp_file[str[i]] && regexp_file["#"] == "5") {
         trans = trans.ganti(j, regexp_file[str[i]]);j++;
-      } else if (regexp_file[str[i]] && regexp_file["א"] == "a") { //unicode->olbheb
-        trans = trans.ganti(j, regexp_file[str[i]]);j++;
+      }
+      //special hebrew->latin (VI A)
+      else if ((str[i] == "ׂ" || str[i] == "ׁ" || str[i] == "̣" || str[i] == "̌" || str[i] == "́" || str[i] == "_") && regexp_file["#"] == "6") {
+        if (str[i] == "ׂ") {
+        	trans = trans.ganti(j-1, "š");j++;
+        }
+        else if (str[i] == "ׁ") {
+        	trans = trans.ganti(j-1, "ś");j++;
+        }
+        else if (str[i] == "̣" || str[i] == "̌" || str[i] == "́" || str[i] == "_") {}
+        else {
+        	trans = trans.ganti(j, regexp_file[str[i]]);j++;
+        }
+      }
+      //normal hebrew->latin Alt (VI B)
+      else if (regexp_file[str[i]] && regexp_file["#"] == "6") {
+        trans = trans.ganti(j, regexp_file[str[i]]);
+        if (str[i] == "ט" || str[i] == "צ" || str[i] == "ץ") {
+        	j += 2;
+        }
+        else j++;
+      }
+      //special hebrew->latin (VII A)
+      else if ((str[i] == "ׂ" || str[i] == "ׁ" || str[i] == "̣" || str[i] == "̌" || str[i] == "́" || str[i] == "_") && regexp_file["#"] == "7") {
+        if (str[i] == "ׂ") {
+        	trans = trans.ganti(j-1, "š");j++;
+        }
+        else if (str[i] == "ׁ") {
+        	trans = trans.ganti(j-1, "ś");j++;
+        }
+        else if (str[i] == "̣" || str[i] == "̌" || str[i] == "́") {}
+        else {
+        	trans = trans.ganti(j, regexp_file[str[i]]);
+        	if (str[i] == "א" || str[i] == "ע" || str[i] == "ח" || str[i] == "ו" || str[i] == "י") { j++; }
+        	else j += 2;
+        }
+      }
+      //normal hebrew->latin Alt (VII B)
+      else if (regexp_file[str[i]] && regexp_file["#"] == "7") {
+        trans = trans.ganti(j, regexp_file[str[i]]);
+        if (str[i] == "א" || str[i] == "ע" || str[i] == "ח" || str[i] == "ו" || str[i] == "י") { j++; }
+        else j += 2;
       } else {
         trans = trans.ganti(j, str[i]);j++;
       }
