@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="el" xml:lang="el">
+<head>
+ <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+ <meta content="utf-8" http-equiv="encoding">
+ <meta http-equiv="X-UA-Compatible" content="text/html;" />
+ <meta property="fb:admins" content="100002305543276"/>
+ <title>OLB Greek (OLBGRK) to Unicode Transliteration by bennylin</title>
+ <link rel="stylesheet" href="specimen_stylesheet.css" type="text/css" charset="utf-8" />
+ <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+ <script src="http://bennylin.github.io/transliterasijawa/easytabs.js" type="text/javascript" charset="utf-8"></script>
+ <script src="http://bennylin.github.io/transliterasijawa/transliterator-grk.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+ <script src="http://bennylin.github.io/transliterasijawa/script.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+ <script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+   $('#container').easyTabs({defaultContent:1});
+  });
+ </script>
+</head>
+
+  <body onload="document.getElementById('inp_txt').focus();">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '788715451208485',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div id="container">
+ <div id="header">OLB Greek (OLBGRK) to Unicode Transliteration (<i>vica versa</i>) by bennylin</div>
+ <ul class="tabs">
+  <li><a href="#home">Home</a></li>
+ </ul>
+
+ <div id="main_content">
+   <div id="home">
+    <div id="bd" role="main">
+      <h1>Welcome to the Unicode era!</h1>
+      <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+      <div id="output" class="gb">
+        <form name="formText">
+           <input type="reset" value="reset" />
+         <textarea id="ta" class="main_ta" name="editSrc"></textarea>
+           <input onclick="transliterate(olbgrk2unicode)" name="buttonConvert" type="button" value="olbgrk &gt; unicode" />
+           <input onclick="transliterate(unicode2olbgrk)" name="buttonConvert" type="button" value="unicode &gt; olbgrk" />jawa
+        </form>
+      </div>
+
+
+
+      <!--<div class="fb-comments" data-href="http://bennylin.github.io/transliterasijawa/v1/" data-width="370" data-num-posts="10"></div>-->
+    </div>
+  </div>
+
+
+<div class="fb-comments" data-href="http://bennylin.github.io/transliterasijawa/v1/" data-numposts="5" data-colorscheme="light"></div>
+
+ </div>
+ <div id="footer">
+  <p>&copy;<a href="lama.html">08-2015</a> v1.2 | <a href="http://facebook.com/bennylin.solo">Facebook</a> | <a href="http://twitter.com/bennylin">Twitter</a> | <a href="http://github.com/bennylin">Github</a></p>
+ </div>
+</div>
+</body>
+</html>
