@@ -9,7 +9,7 @@
  <meta property="fb:admins" content="100002305543276"/>
  <title>OLB Greek (OLBGRK) to Unicode Transliteration by bennylin</title>
  <link rel="stylesheet" href="specimen_stylesheet.css" type="text/css" charset="utf-8" />
- <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+ <link rel="stylesheet" href="stylesheet-olb.css" type="text/css" charset="utf-8" />
  <script src="http://bennylin.github.io/transliterasijawa/transliterator-grk.js" type="text/javascript" language="javascript" charset="utf-8"></script>
  <script type="text/javascript" charset="utf-8">
   $(document).ready(function() {
@@ -49,18 +49,23 @@
       <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
       <div id="output" class="gb">
         <form name="formText">
-           <input type="reset" value="reset" />
+           <input value="reset" type="reset">
          <textarea id="ta" class="main_ta" name="editSrc">εν αρχη ην ο λογος και ο λογος ην προς τον θεον και θεος ην ο λογος</textarea>
-           <input onclick="transliterate(olbgrk2unicode)" name="buttonConvert" type="button" value="olbgrk &gt; unicode" />
-           <input onclick="transliterate(unicode2olbgrk)" name="buttonConvert" type="button" value="unicode &gt; olbgrk" />
-           <input onclick="transliterate(greek2latin)" name="buttonConvert" type="button" value="greek &gt; latin" /><br>
+           <input onclick="transliterate(olbgrk2unicode)" name="buttonConvert" value="olbgrk &gt; unicode" type="button">
+           <input onclick="transliterate(unicode2olbgrk)" name="buttonConvert" value="unicode &gt; olbgrk" type="button">
+           <input onclick="transliterate(greek2latin)" name="buttonConvert" value="greek &gt; latin" type="button"><br>
            <input onclick="transliterate(olbheb2unicode)" name="buttonConvert" value="olbheb &gt; unicode" type="button">
            <input onclick="transliterate(unicode2olbheb)" name="buttonConvert" value="unicode &gt; olbheb" type="button">
+           <input onclick="transliterate(hebrew2latin)" name="buttonConvert" value="hebrew &gt; latin" type="button">
+           <input onclick="transliterate(hebrew2latinAlt)" name="buttonConvert" value="hebrew &gt; latin (Alt)" type="button">
         </form>
       </div>
-      <p>Note on olbheb &gt; unicode: This simple program doesn't deal with ltr to rtl mess. You're free to fork this and improve that aspect, if you want, but as it is right now, it will only transliterate the string from ltr direction</p>
-      <p>Note on unicode &gt; olbheb: Known bug: "שׁ" should transliterate to "S" and "שׂ" should transliterate to "V", but instead both still transliterate to "v"</p>
-      <p>Note on greek &gt; latin: This is a one way button. It can only transliterate one-way from Unicode Greek to Latin.</p>
+      <p>Note on olbheb &gt; unicode: This simple program doesn't deal 
+with ltr to rtl mess. You're free to fork this and improve that aspect, 
+if you want, but as it is right now, it will only transliterate the 
+string from ltr direction</p>
+      <p>Note on greek/hebrew &gt; latin: This is a one way button. It can only transliterate one-way from Unicode to Latin.</p>
+      <p>Note on hebrew &gt; latin (Alt): This is my alternate transliteration. Use at your own risk ;)</p>
     </div>
   </div>
 
