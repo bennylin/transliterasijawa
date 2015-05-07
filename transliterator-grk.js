@@ -24,6 +24,8 @@ var olbgrk2unicode  = {
 "D":"Δ",
 "e":"ε",
 "E":"Ε",
+"ē":"η",//addition
+"Ē":"Η",//addition
 "f":"φ",
 "F":"Φ",
 "g":"γ",
@@ -55,8 +57,11 @@ var olbgrk2unicode  = {
 "u":"υ",
 "U":"Υ",
 "v":"ς",
+"ş":"ς",//addition
 "w":"ω",
 "W":"Ω",
+"ō":"ω",//addition
+"Ō":"Ω",//addition
 "x":"ξ",
 "X":"Ξ",
 "y":"θ",
@@ -124,8 +129,8 @@ var greek2latin = {
 "Α":"A",
 "β":"b",
 "Β":"B",
-"χ":"ch",
-"Χ":"CH",
+"χ":"ćh",//use c-accute accent, to avoid wrong backtranslit from αρχη->arch->αρχ
+"Χ":"ĆH",
 "δ":"d",
 "Δ":"D",
 "ε":"e",
@@ -160,7 +165,7 @@ var greek2latin = {
 "Τ":"T",
 "υ":"u",
 "Υ":"U",
-"ς":"s̱",
+"ς":"ş",//final sigma, s-cedilla
 "ω":"ō",
 "Ω":"Ō",
 "ξ":"x",
@@ -339,7 +344,21 @@ function transliterate(regexp_file) {
     for (var i = 0, j = 0; i < str.length; i++) {
     	//olbgrk->unicode (I)
       if (regexp_file[str[i]] && regexp_file["#"] == "1") {
-        trans = trans.ganti(j, regexp_file[str[i]]);j++;
+        if (str[i] == "h" && i > 0 && str[i-1] == "ć") {
+        	trans = trans.ganti(j-1, "χ");
+        } else if ((str[i] == "h" || str[i] == "H") && i > 0 && str[i-1] == "C") {
+        	trans = trans.ganti(j-1, "Χ");
+        } else if (str[i] == "h" && i > 0 && str[i-1] == "t") {
+        	trans = trans.ganti(j-1, "θ");
+        } else if ((str[i] == "h" || str[i] == "H") && i > 0 && str[i-1] == "T") {
+        	trans = trans.ganti(j-1, "Θ");
+        } else if (str[i] == "s" && i > 0 && str[i-1] == "p") {
+        	trans = trans.ganti(j-1, "ψ");
+        } else if ((str[i] == "s" || str[i] == "S") && i > 0 && str[i-1] == "P") {
+        	trans = trans.ganti(j-1, "Ψ");
+        } else {
+        	trans = trans.ganti(j, regexp_file[str[i]]);j++;
+        }
       }
       //unicode->olbgrk (II)
       else if (regexp_file[str[i]] && regexp_file["#"] == "2") {
