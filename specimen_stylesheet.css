@@ -377,7 +377,10 @@ code {
 
 #home p,
 #faq p,
-#unicode p{
+#unicode p,
+#resources p,
+#ansi p,
+#aksara p{
 	line-height: 1.2em;
 	margin-bottom: 18px;
 	font: 13px Arial, sans-serif;
