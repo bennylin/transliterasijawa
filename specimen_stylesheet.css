@@ -378,8 +378,8 @@ code {
 #home p,
 #faq p,
 #unicode p,
-#resources p,
-#ansi p,
+#resources p, #resources figcaption
+#ansi p, #ansi ol
 #aksara p{
 	line-height: 1.2em;
 	margin-bottom: 18px;
