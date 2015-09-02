@@ -363,17 +363,9 @@ code {
 	padding: 2px 0;
 }
 
-
-#unicode h1 {
-	font-family: Arial, sans-serif;
-}
 /* @end */
 
 /* @group Installing */
-
-#faq {
-	font: 13px Arial, sans-serif;
-}
 
 #home p,
 #faq p,
@@ -385,8 +377,6 @@ code {
 	margin-bottom: 18px;
 	font: 13px Arial, sans-serif;
 }
-
-
 
 #faq h3{
 	font-size: 15px;
@@ -402,5 +392,3 @@ code {
 	font: 11px "Courier New", Courier, mono;
 	vertical-align: middle;
 }
-
- 
