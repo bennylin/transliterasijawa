@@ -277,7 +277,7 @@ function transliterate(regexp_file) {
           else if (i > 0 && str[i] == "ꦴ" && str[i-1] == "ꦻ") //-au //2 aksara -> 2 huruf
             { trans = trans.ganti3(j, "au"); }
           else if (str[i] == "ꦴ") //-aa
-            { trans = trans.ganti(j, "a"); j++}
+            { trans = trans.ganti(j, "aa"); j++}
           else if ( i > 0 && (str[i] == "ꦶ" || str[i] == "ꦸ" || str[i] == "ꦺ" || str[i] == "ꦼ") && (str[i-1] == "ꦄ" || str[i-1] == "ꦌ" || str[i-1] == "ꦆ" || str[i-1] == "ꦎ" || str[i-1] == "ꦈ") )
             { trans = trans.ganti(j, regexp_file[str[i]]);j++;}
           else 
