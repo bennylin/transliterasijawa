@@ -9,7 +9,7 @@
 }
 .main_ta
 {
-    font-family: 'Aksara Bali';
+    font-family: 'Aksara Bali, Noto Sans Balinese';
    width:100%;
    height:250px;
    text-align:left;
@@ -17,7 +17,7 @@
 }
 .tb
 {
-    font-family: 'Aksara Bali';
+    font-family: 'Aksara Bali, Noto Sans Balinese';
    width:100%;
    font-size:150%;
 }
@@ -28,7 +28,7 @@
 }
 .gb
 {
-    font-family: 'Aksara Bali';
+    font-family: 'Aksara Bali, Noto Sans Balinese';
     margin:10px;
     border-style:solid;
     border-width:10px;
@@ -40,7 +40,7 @@
 
 #prev_label
 {
-    font-family: 'Aksara Bali';
+    font-family: 'Aksara Bali, Noto Sans Balinese';
     color:dodgerblue;
     font-size:150%;
     line-height:3em;
