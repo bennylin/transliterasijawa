@@ -209,7 +209,8 @@ return this.substr(0, index-2) + character;// + this.substr(index+character.leng
 }
 String.prototype.capitalize = function() {
 return this.charAt(0).toUpperCase() + this.slice(1);
-}function transliterate(regexp_file) {
+}
+function transliterate(regexp_file) {
 var agt = navigator.userAgent.toLowerCase();
 if (agt.indexOf("msie")!=-1) { //IE
 var range = document.selection.createRange()
@@ -230,22 +231,40 @@ if (str[i] == "ᬳ") { //ha
 if ( i > 0 && (str[i-1] == "ᭂ" || str[i-1] == "ᬾ" || str[i-1] == "ᬶ" || str[i-1] == "ᬵ" || str[i-1] == "ᬸ" || str[i-1] == "ᬅ" || str[i-1] == "ᬏ" || str[i-1] == "-" || str[i-1] == "ᬑ" || str[i-1] == "ᬉ") ) { trans = trans.ganti(j, "h"+regexp_file[str[i]]);j+=2; }
 if ( i > 0 && (str[i-1] == "꧊") ) { trans = trans.ganti(j, "H"+regexp_file[str[i]]);j+=2; }
 else { trans = trans.ganti(j, regexp_file[str[i]]);j++; }
-} else if (str[i] == "ᬭ" && i > 0 && str[i-1] == "ᬃ") { //double rr
+} else if (i > 0 && str[i] == "ᬭ" && str[i-1] == "ᬃ") { //double rr
 trans = trans.ganti(j, "a");j++;
-} else if (str[i] == "ᬗ" && i > 0 && str[i-1] == "ᬂ") { //double ngng
+} else if (i > 0 && str[i] == "ᬗ" && str[i-1] == "ᬂ") { //double ngng
 trans = trans.ganti(j, "a");j++;
 } else if (str[i] == "ᬵ" || str[i] == "ᬶ" || str[i] == "ᬸ" || str[i] == "ᬾ" || str[i] == "ᭂ") {
-if (str[i] == "ᬵ" && i > 0 && str[i-1] == "ᬾ") //-o
+if (i > 2 && str[i-1] == "ᬳ" && str[i-2] == "ᬳ") { //-hah-
+if (str[i] == "ᬵ") trans = trans.ganti3(j,"ā");
+else if (str[i] == "ᬶ") trans = trans.ganti3(j,"ai");
+else if (str[i] == "ᬸ") trans = trans.ganti3(j,"au");
+else if (str[i] == "ᬾ") trans = trans.ganti3(j,"ae");
+else if (str[i] == "ᭂ") trans = trans.ganti3(j,"aě");
+//str[i] == "ᬶ" || str[i] == "ᬸ" || str[i] == "ᬾ" || str[i] == "ᭂ"
+} else if (i > 2 && str[i-1] == "ᬳ") { //-h-
+if (str[i] == "ᬵ") trans = trans.ganti3(j,"ā");
+else if (str[i] == "ᬶ") trans = trans.ganti3(j,"i");
+else if (str[i] == "ᬸ") trans = trans.ganti3(j,"u");
+else if (str[i] == "ᬾ") trans = trans.ganti3(j,"e");
+else if (str[i] == "ᭂ") trans = trans.ganti3(j,"ě");
+j--;
+//str[i] == "ᬶ" || str[i] == "ᬸ" || str[i] == "ᬾ" || str[i] == "ᭂ"
+}
+else if (i > 0 && str[i] == "ᬵ" && str[i-1] == "ᬾ") //-o //2 aksara -> 1 huruf
 { trans = trans.ganti2(j, "o"); }
-else if (str[i] == "ᬵ" && i > 0 && str[i-1] == "ᬿ") //-au
-{ trans = trans.ganti3(j, "au");j++; }
-else if ( (str[i] == "ᬶ" || str[i] == "ᬸ" || str[i] == "ᬾ" || str[i] == "ᭂ") && i > 0 && (str[i-1] == "ᬅ" || str[i-1] == "ᬏ" || str[i-1] == "-" || str[i-1] == "ᬑ" || str[i-1] == "ᬉ") )
+else if (i > 0 && str[i] == "ᬵ" && str[i-1] == "ᬿ") //-au //2 aksara -> 2 huruf
+{ trans = trans.ganti3(j, "au"); }
+else if (str[i] == "ᬵ") //-aa
+{ trans = trans.ganti(j, "aa"); j++}
+else if ( i > 0 && (str[i] == "ᬶ" || str[i] == "ᬸ" || str[i] == "ᬾ" || str[i] == "ᭂ") && (str[i-1] == "ᬅ" || str[i-1] == "ᬏ" || str[i-1] == "-" || str[i-1] == "ᬑ" || str[i-1] == "ᬉ") )
 { trans = trans.ganti(j, regexp_file[str[i]]);j++;}
 else
 { trans = trans.ganti2(j, regexp_file[str[i]]); }
-} else if (str[i] == "" || str[i] == "" || str[i] == "" || str[i] == "ᬷ" || str[i] == "ᬹ" || str[i] == "ᬿ" || str[i] == "-" || str[i] == "ᬐ") { //2 huruf
+} else if (str[i] == "" || str[i] == "" || str[i] == "" || str[i] == "ᬷ" || str[i] == "ᬹ" || str[i] == "ᬿ" || str[i] == "-" || str[i] == "ᬐ") { //1 aksara -> 2 huruf
 trans = trans.ganti2(j, regexp_file[str[i]]);j++;
-} else if (str[i] == "᬴") {
+} else if (str[i] == "᬴") {//2 aksara -> 2 huruf
 if (i > 0 && str[i-1] == "ᬚ") {
 if (i > 1 && str[i-2] == "꧊") { trans = trans.ganti3(j, "Za"); }
 else { trans = trans.ganti3(j, "za"); } }
@@ -277,7 +296,9 @@ else if (str[i] == "ᬢ" || str[i] == "ᬣ") { trans = trans.ganti(j, "Ta");j+=2
 else if (str[i] == "ᬯ") { trans = trans.ganti(j, "Wa");j+=2; }
 else if (str[i] == "ᬬ") { trans = trans.ganti(j, "Ya");j+=2; }
 else { trans.ganti(j, regexp_file[str[i]]);j+=3; }
-} else {
+} else if (str[i] == "ᬔ" || str[i] == "ᬖ" || str[i] == "ᬙ" || str[i] == "ᬛ" || str[i] == "ᬣ" || str[i] == "ᬥ" || str[i] == "ᬨ" || str[i] == "ᬪ" || str[i] == "ᬰ") {//bha, cha, dha, dll.
+trans = trans.ganti(j, regexp_file[str[i]]);j+=3;
+} else {//ba, ca, da, dll.
 trans = trans.ganti(j, regexp_file[str[i]]);j+=2; }
 } else if (str[i] == "ᬱ") { //ṣa
 trans = trans.ganti(j, regexp_file[str[i]]);j+=2;
