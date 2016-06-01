@@ -256,17 +256,17 @@ function transliterate(regexp_file) {
         } else if (str[i] == "ꦔ" && i > 0 && str[i-1] == "ꦁ") { //double ngng
           trans = trans.ganti(j, "a");j++;
         } else if (str[i] == "ꦴ" || str[i] == "ꦶ" || str[i] == "ꦸ" || str[i] == "ꦺ" || str[i] == "ꦼ") {
-          if (str[i] == "ꦴ" && i > 0 && str[i-1] == "ꦺ") //-o
+          if (str[i] == "ꦴ" && i > 0 && str[i-1] == "ꦺ") //-o //2 aksara -> 1 huruf
             { trans = trans.ganti2(j, "o"); }
-          else if (str[i] == "ꦴ" && i > 0 && str[i-1] == "ꦻ") //-au
-            { trans = trans.ganti3(j, "au");j++; }
+          else if (str[i] == "ꦴ" && i > 0 && str[i-1] == "ꦻ") //-au //2 aksara -> 2 huruf
+            { trans = trans.ganti3(j, "au"); }
           else if ( (str[i] == "ꦶ" || str[i] == "ꦸ" || str[i] == "ꦺ" || str[i] == "ꦼ") && i > 0 && (str[i-1] == "ꦄ" || str[i-1] == "ꦌ" || str[i-1] == "ꦆ" || str[i-1] == "ꦎ" || str[i-1] == "ꦈ") )
             { trans = trans.ganti(j, regexp_file[str[i]]);j++;}
           else 
             { trans = trans.ganti2(j, regexp_file[str[i]]); }
-        } else if (str[i] == "ꦽ" || str[i] == "ꦾ" || str[i] == "ꦿ" || str[i] == "ꦷ" || str[i] == "ꦹ" || str[i] == "ꦻ" || str[i] == "ꦇ" || str[i] == "ꦍ") { //2 huruf
+        } else if (str[i] == "ꦽ" || str[i] == "ꦾ" || str[i] == "ꦿ" || str[i] == "ꦷ" || str[i] == "ꦹ" || str[i] == "ꦻ" || str[i] == "ꦇ" || str[i] == "ꦍ") { //1 aksara -> 2 huruf
           trans = trans.ganti2(j, regexp_file[str[i]]);j++;
-        } else if (str[i] == "꦳") {
+        } else if (str[i] == "꦳") {//2 aksara -> 2 huruf
           if (i > 0 && str[i-1] == "ꦗ") { 
             if (i > 1 && str[i-2] == "꧊") { trans = trans.ganti3(j, "Za"); }
             else { trans = trans.ganti3(j, "za"); } }
