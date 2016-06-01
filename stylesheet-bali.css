@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Aksara Bali';
-    src: local("ᬳᬦᬘᬭᬓ"),
-         url('I-Bal-Aksara-Bali.eot'),
+    src: url('I-Bal-Aksara-Bali.eot'),
          url('I-Bal-Aksara-Bali.eot?#iefix') format('embedded-opentype'),
          url('I-Bal-Aksara-Bali.woff') format('woff'),
          url('I-Bal-Aksara-Bali.ttf') format('truetype');
