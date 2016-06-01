@@ -277,6 +277,10 @@ else { trans = trans.ganti3(j, "va"); } }//catatan, "va" biasanya ditulis sama d
 else { trans = trans.ganti2(j, regexp_file[str[i]]); }
 } else if (str[i] == "᭄") {
 trans = trans.ganti2(j, regexp_file[str[i]]);
+} else if (i > 1 && str[i] == "ᬘ" &&  str[i-1] == "᭄" &&  str[i-2] == "ᬜ") { //nyj & nyc
+trans = trans.ganti2(j-2, "nc");
+} else if (i > 1 && str[i] == "ᬚ" &&  str[i-1] == "᭄" &&  str[i-2] == "ᬜ") { //nyj & nyc
+trans = trans.ganti2(j-2, "nj");
 } else if (str[i] == "ᬓ" || str[i] == "ᭅ" || str[i] == "ᬔ" || str[i] == "ᬕ" || str[i] == "ᬖ" || str[i] == "ᬘ" || str[i] == "ᬙ" || str[i] == "ᬚ" || str[i] == "ᬛ" || str[i] == "ᬡ" || str[i] == "ᬢ" || str[i] == "ᬣ" || str[i] == "ᬤ" || str[i] == "ᬥ" || str[i] == "ᬦ" || str[i] == "ᬧ" || str[i] == "ᬨ" || str[i] == "ᬩ" || str[i] == "ᬪ" || str[i] == "ᬫ" || str[i] == "ᬬ" || str[i] == "ᬭ" || str[i] == "-" || str[i] == "ᬮ" || str[i] == "ᬯ" || str[i] == "ᬰ" || str[i] == "ᬲ" || str[i] == "ᬋ" || str[i] == "ᬍ" || str[i] == "ᬂ") {
 if (i > 0 && str[i-1] == "꧊") {
 if (str[i] == "ᭅ") { trans = trans.ganti(j, "Qa");j+=2; }
