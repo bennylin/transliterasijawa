@@ -21,9 +21,9 @@ var java2latn = {
 "ꦆ":'I',//I
 "ꦇ":'Ii',//Ii -- archaic
 "ꦈ":'U',//U
-"ꦉ":'rê',//pa cêrêk
-"ꦊ":'lê',//nga lêlêt
-"ꦋ":'lêu',//nga lêlêt Raswadi -- archaic
+"ꦉ":'rě',//pa cêrêk
+"ꦊ":'lě',//nga lêlêt
+"ꦋ":'lěu',//nga lêlêt Raswadi -- archaic
 "ꦌ":'E',//E
 "ꦍ":'Ai',//Ai
 "ꦎ":'O',//O
@@ -179,6 +179,8 @@ var latn2java = {
 "ai":'ꦻ',
 "ê":'ꦼ',
 "rê":'ꦽ',
+"ě":'ꦼ',
+"rě":'ꦽ',
 "ya":'ꦾ',
 "ra":'ꦿ',
 
