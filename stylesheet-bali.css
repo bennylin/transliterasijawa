@@ -1,15 +1,19 @@
+/*
+ * Noto Sans Balinese (Balinese) http://www.google.com/fonts/earlyaccess
+ */
 @font-face {
-    font-family: 'Aksara Bali';
-    src: url('I-Bal-Aksara-Bali.eot'),
-         url('I-Bal-Aksara-Bali.eot?#iefix') format('embedded-opentype'),
-         url('I-Bal-Aksara-Bali.woff') format('woff'),
-         url('I-Bal-Aksara-Bali.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Noto Sans Balinese';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosansbalinese/v1/NotoSansBalinese-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/notosansbalinese/v1/NotoSansBalinese-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/notosansbalinese/v1/NotoSansBalinese-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosansbalinese/v1/NotoSansBalinese-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosansbalinese/v1/NotoSansBalinese-Regular.ttf) format('truetype');
 }
 .main_ta
 {
-    font-family: 'Aksara Bali, Noto Sans Balinese';
+    font-family: 'Noto Sans Balinese';
    width:100%;
    height:250px;
    text-align:left;
@@ -17,7 +21,7 @@
 }
 .tb
 {
-    font-family: 'Aksara Bali, Noto Sans Balinese';
+    font-family: 'Noto Sans Balinese';
    width:100%;
    font-size:150%;
 }
@@ -28,7 +32,7 @@
 }
 .gb
 {
-    font-family: 'Aksara Bali, Noto Sans Balinese';
+    font-family: 'Noto Sans Balinese';
     margin:10px;
     border-style:solid;
     border-width:10px;
@@ -40,7 +44,7 @@
 
 #prev_label
 {
-    font-family: 'Aksara Bali, Noto Sans Balinese';
+    font-family: 'Noto Sans Balinese';
     color:dodgerblue;
     font-size:150%;
     line-height:3em;
