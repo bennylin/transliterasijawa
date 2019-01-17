@@ -18,11 +18,11 @@ body, html{
     text-decoration:none;
 }
 #prev_label{
-    font-family: 'Tuladha Jejeg';
+    font-family: 'Noto Sans Javanese, Tuladha Jejeg';
     line-height: 3em;
 }
 .gb, .main_ta, .tb{
-    font-family: 'Tuladha Jejeg';
+    font-family: 'Noto Sans Javanese, Tuladha Jejeg';
 }
 img{
     border: 0px none ;
