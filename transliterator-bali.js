@@ -55,7 +55,7 @@ var bali2latn = {
 "ᬨ":'pha',//Murda/PA KAPAL
 "ᬩ":'ba',
 "ᬪ":'bha',//Murda/BA KEMBANG
-"ᬫ":'ma',
+"ᬫ":'ma'  ,
 "ᬬ":'ya',
 "ᬭ":'ra',
 "ᬮ":'la',
@@ -107,8 +107,8 @@ var latn2bali = {
 "h":'ᬄ',//wignyan
 "a":'ᬅ',//swara-A
 "i":'ᬇ',//I-Kawi -- archaic
-"i":'-',//I
-"ii":'-',//Ii -- archaic
+"i":'ᬇ',//I
+"ii":'ᬇ',//Ii -- archaic
 "u":'ᬉ',//U
 "rê":'ᬋ',//pa cêrêk
 "rě":'ᬋ',//pa cěrěk
