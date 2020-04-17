@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="el" xml:lang="el">
+<html xmlns="//www.w3.org/1999/xhtml" lang="el" xml:lang="el">
 <head>
  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
  <meta content="utf-8" http-equiv="encoding">
@@ -11,9 +11,9 @@
  <meta http-equiv="X-UA-Compatible" content="text/html;" />
  <meta property="fb:admins" content="100002305543276"/>
  <title>OLB Greek (OLBGRK) to Unicode Transliteration by bennylin</title>
- <link rel="stylesheet" href="specimen_stylesheet.css" type="text/css" charset="utf-8" />
- <link rel="stylesheet" href="stylesheet-olb.css" type="text/css" charset="utf-8" />
- <script src="http://bennylin.github.io/transliterasijawa/transliterator-grk.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+ <link rel="stylesheet" href="css/specimen_stylesheet.css" type="text/css" charset="utf-8" />
+ <link rel="stylesheet" href="css/stylesheet-olb.css" type="text/css" charset="utf-8" />
+ <script src="//bennylin.github.io/transliterasi/js/transliterator-grk.js" type="text/javascript" language="javascript" charset="utf-8"></script>
  <script type="text/javascript" charset="utf-8">
   $(document).ready(function() {
    $('#container').easyTabs({defaultContent:1});
@@ -22,23 +22,8 @@
 </head>
 
   <body onload="document.getElementById('inp_txt').focus();">
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '788715451208485',
-      xfbml      : true,
-      version    : 'v2.2'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v6.0"></script>
 <div id="container">
  <div id="header">Welcome to the Unicode era!</div>
  <ul class="tabs">
@@ -54,10 +39,10 @@
         <form name="formText">
            <input value="reset" type="reset">
          <textarea id="ta" class="main_ta" name="editSrc">εν αρχη ην ο λογος και ο λογος ην προς τον θεον και θεος ην ο λογος</textarea>
-           <input onclick="transliterate(olbgrk2unicode)" name="buttonConvert" value="olbgrk &gt; unicode" type="button">
+           <input onclick="transliterate(olbgrk2unicode)" name="buttonConvert" value="olbgrk/latin &gt; unicode" type="button">
            <input onclick="transliterate(unicode2olbgrk)" name="buttonConvert" value="unicode &gt; olbgrk" type="button">
            <input onclick="transliterate(greek2latin)" name="buttonConvert" value="greek &gt; latin" type="button"><br>
-           <input onclick="transliterate(olbheb2unicode)" name="buttonConvert" value="olbheb &gt; unicode" type="button">
+           <input onclick="transliterate(olbheb2unicode)" name="buttonConvert" value="olbheb/latin &gt; unicode" type="button">
            <input onclick="transliterate(unicode2olbheb)" name="buttonConvert" value="unicode &gt; olbheb" type="button">
            <input onclick="transliterate(hebrew2latin)" name="buttonConvert" value="hebrew &gt; latin" type="button">
            <input onclick="transliterate(hebrew2latinAlt)" name="buttonConvert" value="hebrew &gt; latin (Alt)" type="button">
@@ -73,11 +58,11 @@ string from ltr direction</p>
   </div>
 
 
-<div class="fb-comments" data-href="http://bennylin.github.io/olb2unicode/" data-numposts="5" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="https://bennylin.github.io/olbgrk2unicode/" data-numposts="5" data-colorscheme="light"></div>
 
  </div>
  <div id="footer">
-  <p>&copy;2015 v0.9 | <a href="http://facebook.com/bennylin.solo">Facebook</a> | <a href="http://twitter.com/bennylin">Twitter</a> | <a href="http://github.com/bennylin">Github</a></p>
+  <p>&copy;2015 v0.9 | <a href="//facebook.com/bennylin.solo">Facebook</a> | <a href="//twitter.com/bennylin">Twitter</a> | <a href="//github.com/bennylin">Github</a></p>
  </div>
 </div>
 </body>
