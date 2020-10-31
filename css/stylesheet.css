@@ -1,10 +1,10 @@
-@font-face {
-    font-family: 'Tuladha Jejeg';
+﻿@font-face {
+    font-family: 'Noto Sans Javanese';
     src: local("ꦲꦤꦕꦫꦏ"),
-         url('TuladhaJejeg_gr.eot'),
-         url('TuladhaJejeg_gr.eot?#iefix') format('embedded-opentype'),
-         url('TuladhaJejeg_gr.woff') format('woff'),
-         url('TuladhaJejeg_gr.ttf') format('truetype');
+         url('noto2.eot'),
+         url('noto2.eot?#iefix') format('embedded-opentype'),
+         url('noto2.woff') format('woff'),
+         url('noto2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
