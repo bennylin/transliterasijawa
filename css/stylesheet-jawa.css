@@ -10,7 +10,7 @@
 }
 .main_ta
 {
-    font-family: 'Noto Sans Javanese, Tuladha Jejeg';
+    font-family: 'Noto Sans Javanese';
    width:100%;
    height:250px;
    text-align:left;
@@ -18,7 +18,7 @@
 }
 .tb
 {
-    font-family: 'Noto Sans Javanese, Tuladha Jejeg';
+    font-family: 'Noto Sans Javanese';
    width:100%;
    font-size:150%;
 }
@@ -29,7 +29,7 @@
 }
 .gb
 {
-    font-family: 'Noto Sans Javanese, Tuladha Jejeg';
+    font-family: 'Noto Sans Javanese';
     margin:10px;
     border-style:solid;
     border-width:10px;
@@ -41,7 +41,7 @@
 
 #prev_label
 {
-    font-family: 'Noto Sans Javanese, Tuladha Jejeg';
+    font-family: 'Noto Sans Javanese';
     color:dodgerblue;
     font-size:150%;
     line-height:3em;
