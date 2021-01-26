@@ -91,6 +91,13 @@ h2 {
         color: #666;
     }
 
+#sub-header {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #000;
+    color: #fff;
+}
+
 #main_content {
     background-color: #fff;
     padding: 60px 20px 20px;
