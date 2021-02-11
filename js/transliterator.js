@@ -22,46 +22,46 @@ var java2latn = {
 "ꦆ":'I',//I
 "ꦇ":'Ii',//Ii -- archaic
 "ꦈ":'U',//U
-"ꦉ":'rě',//pa cêrêk
-"ꦊ":'lě',//nga lêlêt
-"ꦋ":'lěu',//nga lêlêt Raswadi -- archaic
+"ꦉ":'rê',//pa cêrêk
+"ꦊ":'lê',//nga lêlêt
+"ꦋ":'lêu',//nga lêlêt Raswadi -- archaic
 "ꦌ":'E',//E
 "ꦍ":'Ai',//Ai
 "ꦎ":'O',//O
 
 "ꦏ":'ka',
 "ꦐ":'qa',//Ka Sasak
-"ꦑ":'kha',//Murda
+"ꦑ":'kʰa',//Murda
 "ꦒ":'ga',
-"ꦓ":'gha',//Murda
-"ꦔ":'nga',
+"ꦓ":'gʰa',//Murda
+"ꦔ":'nga',//ṅa
 "ꦕ":'ca',
-"ꦖ":'cha',//Murda
+"ꦖ":'cʰa',//Murda
 "ꦗ":'ja',
 "ꦘ":'Nya',//Ja Sasak, Nya Murda
-"ꦙ":'jha',//Ja Mahaprana
-"ꦚ":'nya',
+"ꦙ":'jʰa',//Ja Mahaprana
+"ꦚ":'nya',//ña 
 "ꦛ":'tha',//'ṭa',
-"ꦜ":'ṭha',//Murda
+"ꦜ":'ṭʰa',//Murda
 "ꦝ":'dha',//'ḍa',
-"ꦞ":'ḍha',//Murda
+"ꦞ":'ḍʰa',//Murda
 "ꦟ":'ṇa',//Murda
 "ꦠ":'ta',
-"ꦡ":'tha',//Murda
+"ꦡ":'ṭa',//Murda
 "ꦢ":'da',
-"ꦣ":'dha',//Murda
+"ꦣ":'ḍa',//Murda
 "ꦤ":'na',
 "ꦥ":'pa',
-"ꦦ":'pha',//Murda
+"ꦦ":'pʰa',//Murda
 "ꦧ":'ba',
-"ꦨ":'bha',//Murda
+"ꦨ":'bʰa',//Murda
 "ꦩ":'ma',
 "ꦪ":'ya',
 "ꦫ":'ra',
 "ꦬ":'Ra',//Ra Agung
 "ꦭ":'la',
 "ꦮ":'wa',
-"ꦯ":'sha',//Murda
+"ꦯ":'śa',//Murda
 "ꦰ":'ṣa',//Sa Mahaprana
 "ꦱ":'sa',
 "ꦲ":'ha',//could also be "a" or any sandhangan swara
@@ -75,8 +75,8 @@ var java2latn = {
 "ꦹ":'uu',
 "ꦺ":'e',
 "ꦻ":'ai',
-"ꦼ":'ě',
-"ꦽ":'rě',
+"ꦼ":'ê',
+"ꦽ":'rê',
 "ꦾ":'ya',
 "ꦿ":'ra',
 
@@ -169,12 +169,12 @@ function transliterate(regexp_file) {
             //str[i] == "ꦶ" || str[i] == "ꦸ" || str[i] == "ꦺ" || str[i] == "ꦼ"
           } 
           else if (i > 2 && str[i-1] == "ꦲ") { //-h-
-            if (str[i] == "ꦴ") trans = trans.ganti3(j,"ā"); 
-            else if (str[i] == "ꦶ") trans = trans.ganti3(j,"i"); 
-            else if (str[i] == "ꦸ") trans = trans.ganti3(j,"u");
-            else if (str[i] == "ꦺ") trans = trans.ganti3(j,"e"); 
-            else if (str[i] == "ꦼ") trans = trans.ganti3(j,"ě"); 
-            j--;
+            if (str[i] == "ꦴ") trans = trans.ganti2(j,"ā"); 
+            else if (str[i] == "ꦶ") trans = trans.ganti2(j,"i"); 
+            else if (str[i] == "ꦸ") trans = trans.ganti2(j,"u");
+            else if (str[i] == "ꦺ") trans = trans.ganti2(j,"e"); 
+            else if (str[i] == "ꦼ") trans = trans.ganti2(j,"ě"); 
+//11-02            j--;
             //str[i] == "ꦶ" || str[i] == "ꦸ" || str[i] == "ꦺ" || str[i] == "ꦼ"
           }
           else /**/if (i > 0 && str[i] == "ꦴ" && str[i-1] == "ꦺ") //-o //2 aksara -> 1 huruf
@@ -221,7 +221,7 @@ function transliterate(regexp_file) {
 		          if ( i > 0 && (str[i-1] == "꧊") ) { 
 		          	trans = trans.ganti(j, "H"+regexp_file[str[i]]);j+=2; 
 		          } else { 
-		          	trans = trans.ganti(j, regexp_file[str[i]]);j++; 
+		          	trans = trans.ganti(j, "@"+regexp_file[str[i]]);j+=2; 
 		          }
             	//trans = trans.ganti(j, "Ha");j+=2; 
             }
@@ -239,6 +239,8 @@ function transliterate(regexp_file) {
             else { trans.ganti(j, regexp_file[str[i]]);j+=3; }
           } else if (str[i] == "ꦑ" || str[i] == "ꦓ" || str[i] == "ꦖ" || str[i] == "ꦙ" || str[i] == "ꦡ" || str[i] == "ꦣ" || str[i] == "ꦦ" || str[i] == "ꦨ" || str[i] == "ꦯ") {//bha, cha, dha, dll.
             trans = trans.ganti(j, regexp_file[str[i]]);j+=3;
+          } else if (str[i] == "ꦲ" && (i == 0 || [" ", "​", "꧀", "꦳", "ꦴ", "ꦶ", "ꦷ", "ꦸ", "ꦹ", "ꦺ", "ꦻ", "ꦼ", "ꦽ", "ꦾ", "ꦿ"].indexOf(str[i-1]) >= 0)) { //ha, preceeded by space or zws or open vowel
+          	trans = trans.ganti(j, "_a");j+=2; 
           } else {//ba, ca, da, dll.
             trans = trans.ganti(j, regexp_file[str[i]]);j+=2; }
         } else if (str[i] == "ꦰ") { //ṣa
